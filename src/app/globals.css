@@ -35,32 +35,35 @@ html {
   overflow-x: hidden;
 }
 
-
-.padding{
-  padding:  2rem 6rem;
+.padding {
+  padding: 2rem 6rem;
 }
 
-.padding__x{
+.padding__x {
   padding: 0 6rem;
 }
 
-@media screen and (max-width: 1060px){
-.padding{
-  padding:  4rem;
-}
-.padding__x{
-  padding: 0 4rem;
-}
+/* .about__bg{
+  background: url("../../public/headoffice.jpg");
+
+} */
+
+@media screen and (max-width: 1060px) {
+  .padding {
+    padding: 4rem;
+  }
+  .padding__x {
+    padding: 0 4rem;
+  }
 }
 
-@media screen and (max-width: 600px){
-.padding{
-  padding:  4rem 2rem;
-  
-}
-.padding__x{
-  padding: 0 2rem;
-}
+@media screen and (max-width: 600px) {
+  .padding {
+    padding: 4rem 2rem;
+  }
+  .padding__x {
+    padding: 0 2rem;
+  }
 }
 
 .scale-up-hor-center {
@@ -116,7 +119,9 @@ html {
   }
 }
 
-
-/* #552713 brown*/
-
-/* #eae7e4 gray */
+.scale-up-center:hover {
+  transition-duration: 0.3s;
+  transform: scale(1.07);
+  -webkit-transition-duration: 0.3s;
+  -webkit-transform: scale(1.07);
+}
