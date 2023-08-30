@@ -4,7 +4,7 @@ import React from "react";
 const ProductCard = ({ imgUrl, name, price }) => {
   return (
     <div className="">
-      <div className="scale-up-center bg-transparent shadow-md">
+      <div className="scale-up-center bg-transparent cursor-pointer shadow-md">
         <Image
           src={imgUrl}
           alt={name}

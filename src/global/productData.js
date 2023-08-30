@@ -1,14 +1,14 @@
 export const products = [
   {
     id: 1,
-    imgUrl: require("../../public/prosta.png"),
-    name: "prosta care",
+    imgUrl: require("../../public/iskclear.png"),
+    name: "isk clear",
     price: 3232,
   },
   {
     id: 2,
-    imgUrl: require("../../public/ulcer.png"),
-    name: "ulcer care",
+    imgUrl: require("../../public/hypercure.png"),
+    name: "hyper cure",
     price: 3232,
   },
   {
@@ -19,8 +19,8 @@ export const products = [
   },
   {
     id: 4,
-    imgUrl: require("../../public/fibro.png"),
-    name: "fibro cure",
+    imgUrl: require("../../public/athrilax.png"),
+    name: "athrilax",
     price: 3232,
   },
   {
@@ -31,20 +31,20 @@ export const products = [
   },
   {
     id: 6,
-    imgUrl: require("../../public/ulcer.png"),
-    name: "ulcer care",
+    imgUrl: require("../../public/goldendrop.png"),
+    name: "golden drop",
     price: 3232,
   },
   {
     id: 7,
-    imgUrl: require("../../public/fibro.png"),
-    name: "fibro cure",
+    imgUrl: require("../../public/optabright.png"),
+    name: "opta bright",
     price: 3232,
   },
   {
     id: 8,
-    imgUrl: require("../../public/fibro.png"),
-    name: "fibro cure",
+    imgUrl: require("../../public/bodywash.png"),
+    name: "body wash",
     price: 3232,
   },
 ];
