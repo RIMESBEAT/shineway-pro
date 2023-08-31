@@ -41,7 +41,7 @@ const Navbar = () => {
         <Link href="/">
           <div className=" flex items-center space-x-3 ">
             <Image priority src={Logo} alt="Logo" className="h-14 w-14" />
-            <h1 className="font-extrabold text-2xl hidden sm:block text-blue-800">
+            <h1 className="font-extrabold text-2xl hidden sm:block text-[#242f9f]">
               Shineway
             </h1>
           </div>
@@ -49,12 +49,12 @@ const Navbar = () => {
         <div className=" items-center hidden lg:flex text-brown-300  font-bold space-x-4 capitalize ">
           {menu?.map((items) => (
             <div
-              className="   hover:text-[#552713] last__child "
+              className="   hover:text-[#242f9f] last__child "
               key={items.id}
             >
               <Link
                 href={items.url}
-                className="focus:border-b-4  border-blue-800"
+                className="focus:border-b-4  border-[#242f9f]"
               >
                 {items.title}
               </Link>
@@ -64,17 +64,17 @@ const Navbar = () => {
         <div className="lg:hidden block content-center">
           {isToggled ? (
             <XMarkIcon
-              className="w-10 rotate-90-ccw text-[#552713]"
+              className="w-10 rotate-90-ccw text-[#242f9f]"
               onClick={() => setIsToggled(false)}
             />
           ) : (
             <Bars3BottomRightIcon
-              className="w-10 text-[#552713]"
+              className="w-10 text-[#242f9f]"
               onClick={() => setIsToggled(true)}
             />
           )}
           {isToggled && (
-            <div className=" absolute z-30 capitalize bg-[#552713] pr-10 pl-40 rounded-md scale-up-hor-center  py-6 text-end right-5">
+            <div className=" absolute z-30 capitalize bg-[#242f9f] pr-10 pl-40 rounded-md scale-up-hor-center  py-6 text-end right-5">
               {menu?.map((item) => (
                 <div
                   className="mb-6 w-full text-bold text-white last__child"
@@ -82,7 +82,7 @@ const Navbar = () => {
                 >
                   <Link
                     href={item.url}
-                    className="focus:border-b-4  border-[#b8e900]"
+                    className="focus:border-b-4 "
                     onClick={() => setIsToggled(false)}
                   >
                     {item.title}

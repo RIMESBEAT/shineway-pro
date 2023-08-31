@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import ImgBG from "../../../../public/headoffice.jpg";
 import Image from "next/image";
@@ -6,13 +7,36 @@ import Jack from "../../../../public/jacksm.png"
 import Jason from "../../../../public/jason.png"
 import Link from "next/link";
 import Accordion from "@/components/accordion/Accordion";
+import  Aos from 'aos';
+import 'aos/dist/aos.css';
+
+Aos.init({
+  // Global settings:
+  disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+  startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
+  initClassName: "aos-init", // class applied after initialization
+  animatedClassName: "aos-animate", // class applied on animation
+  useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+  disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+  debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+  throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+  offset: 100, // offset (in px) from the original trigger point
+  delay: 0, // values from 0 to 3000, with step 50ms
+  duration: 400, // values from 0 to 3000, with step 50ms
+  easing: "ease", // default easing for AOS animations
+  once: false, // whether animation should happen only once - while scrolling down
+  mirror: false, // whether elements should animate out while scrolling past them
+  anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
+});
 
 const page = () => {
-
+ 
   return (
     <main>
-      <section className=" relative h-[60vh] w-full   flex bg-[#eae7e4] items-center justify-center ">
-        <Image src={ImgBG} alt="About" className="h-full w-full  object-cover object-left-top" />
+      <section className=" relative h-auto w-full   flex bg-[#eae7e4] items-center justify-center ">
+        <Image src={ImgBG} alt="About" className="h-full w-full  " />
 
         {/* <div className="absolute padding__x">
           <p className="text-3xl font-extrabold items-center text-orange-500  text-center ">
@@ -24,17 +48,27 @@ const page = () => {
         </div> */}
       </section>
 
-      <section className="padding__x">
+      <section className="padding__x bg-[#eae7e4]" 
+      data-aos="fade-up"
+      data-aos-delay="30"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-sine"
+      data-aos-once="false"
+      
+      >
+        
         <div className="block min-h-max py-10 lg:flex items-center">
           <div className="flex-1  flex items-center justify-center lg:mr-8 ">
             <Image
+            
               src={ImgBG}
               alt="company"
               className="h-full grayscale object-cover rounded-md"
             />
           </div>
-          <div className="flex-1">
-            <h2 className="text-3xl font-extrabold text-[#552713] py-8">
+          <div className="flex-1"   
+           >
+            <h2 className="text-3xl  font-extrabold text-[#242f9f] py-4">
               Our story
             </h2>
             <p className=" font-medium text-justify">
@@ -44,18 +78,24 @@ personal experiences and with the desire to create a platform where Everyone can
           </div>
         </div>
       </section>
-      <section className="padding__x">
+      <section className="padding__x" data-aos="fade-up"
+        data-aos-delay="30"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-sine"
+        data-aos-once="false">
         <div className="grid grid-cols-1  md:grid-cols-2 gap-8 items-baseline justify-start  py-10 ">
-          <div className=" ">
-            <h1 className="text-center font-bold  text-2xl text-[#552713]">
+          <div data-aos="slide-top"
+             data-aos-delay="50" className=" ">
+            <h1 className="text-center font-bold  text-2xl text-[#242f9f]">
               Our Mission
             </h1>
             <p className=" font-medium text-justify">
             Our mission is to Make Life better through provision of  a reliable and effective MLM platform that offers opportunities for people to build their own businesses, earn substantial incomes, and create a better future for themselves and their families. We are committed to offering top-notch products and services that bring value to our customers and distributors alike.
             </p>
           </div>
-          <div className="">
-            <h1 className="text-center font-bold text-2xl text-[#552713]">
+          <div data-aos="slide-bottom"
+             data-aos-delay="50" className="">
+            <h1 className="text-center font-bold text-2xl text-[#242f9f]">
               Our Vision
             </h1>
             <p className=" font-medium text-justify">
@@ -65,18 +105,31 @@ personal experiences and with the desire to create a platform where Everyone can
          
         </div>
       </section>
-      <section className="mt-10">
+      <section className="mt-10" data-aos="fade-up"
+        data-aos-delay="30"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-sine"
+        data-aos-once="false">
         <div className=" justify-center bg-[#eae7e4] py-6 flex">
-          <button className="bg-[#552713] rounded-md py-2 px-3 text-lg font-bold text-white text-center">
+          <button className="bg-[#242f9f] rounded-md py-2 px-3 text-lg font-bold text-white text-center">
             Download Our Complan Here
           </button>
         </div>
       </section>
 
-      <section className="padding__x">
+      <section data-aos="fade-up"
+        data-aos-delay="30"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-sine"
+        data-aos-once="false" className="padding__x relative">
+      <div className=" absolute top-0 left-0 w-full -z-30">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+  <path fill="#eae7e4" fill-opacity="1" d="M0,224L40,213.3C80,203,160,181,240,144C320,107,400,53,480,69.3C560,85,640,171,720,192C800,213,880,171,960,154.7C1040,139,1120,149,1200,176C1280,203,1360,245,1400,266.7L1440,288L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
+</svg>
+        </div>
         <div className="grid grid-cols-1  md:grid-cols-2 gap-8 items-baseline justify-start  py-10 ">
           <div className=" ">
-            <h1 className="text-center font-bold  text-2xl text-[#552713]">
+            <h1 className="text-center font-bold  text-2xl text-[#242f9f]">
               Our Goals
             </h1>
             <p className=" font-medium text-justify">
@@ -92,7 +145,7 @@ personal experiences and with the desire to create a platform where Everyone can
             </p>
           </div>
           <div className="">
-            <h1 className="text-center font-bold text-2xl text-[#552713]">
+            <h1 className="text-center font-bold text-2xl text-[#242f9f]">
               Our Culture
             </h1>
             <p className=" font-medium text-justify">
@@ -104,18 +157,22 @@ personal experiences and with the desire to create a platform where Everyone can
       </section>
 
       
-      <section className="padding__x">
+      <section className="padding__x" data-aos="fade-up"
+        data-aos-delay="30"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-sine"
+        data-aos-once="false">
 
         <div className="">
           <div className=" text-center my-10 text-2xl font-extrabold">
-            <h1>The Amazing Team of Us</h1>
+            <h1 className="text-2xl font-bold text-[#242f9f]">The Amazing Team of Us</h1>
           </div>
           <div className=" block md:flex items-baseline   gap-8">
-            <div className="flex-1 ">
+            <div className="flex-1 my-8 md:my-0 scale-up-center ">
 
             <TeamCard name="Mr. Jack Wang" position="CEO"  imgUrl={Jack}/>
             </div>
-            <div className="flex-1 my-8 md:my-0">
+            <div className="flex-1 my-8 md:my-0 scale-up-center">
 
             <TeamCard name="Mr. Jason Tian" position="Vise Chairman"  imgUrl={Jason}/>
             </div>
@@ -123,7 +180,11 @@ personal experiences and with the desire to create a platform where Everyone can
         </div>
       </section>
 
-      <section className="padding__x">
+      <section className="padding__x" data-aos="fade-up"
+        data-aos-delay="30"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-sine"
+        data-aos-once="false">
         <div className="mt-10">
           <h1 className="text-2xl font-bold ">Our Offices</h1>
 <div className="pt-8 w-full  md:w-1/2">
@@ -161,7 +222,11 @@ personal experiences and with the desire to create a platform where Everyone can
         </div>
       </section>
 
-      <section className="py-10 letter__bg items-center justify-center flex" >
+      <section data-aos="fade-up"
+        data-aos-delay="30"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-sine"
+        data-aos-once="false" className="py-10 letter__bg items-center justify-center flex" >
         <div className="  text-white padding__x">
           <h1 className="text-extrabold text-2xl md:text-4xl text-center">Let Us Keep You Updated</h1>
 <p className="py-6 text-sm md:text-lg text-center">Subscribe to Our Newsletter to Stay Updated and notified about Our New Products and Services</p>

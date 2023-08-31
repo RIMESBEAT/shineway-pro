@@ -13,7 +13,7 @@ const page = () => {
   }, []);
   return (
     <main>
-      <section className="padding__x bg-orange-500">
+      <section className="padding__x bg-orange-500 ">
         <div className=" block  md:flex items-center md:pt-10 pt-24">
           <div className="flex-1 mr-0 md:mr-10">
             <h1 className="text-4xl text-center md:text-start lg:text-5xl xl:text-6xl md:text-4xl font-extrabold text-white">
@@ -48,6 +48,7 @@ const page = () => {
                   price={item.price}
                   imgUrl={item.imgUrl}
                   name={item.name}
+                  description={item.description}
                 />
               </div>
             ))}

@@ -44,7 +44,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb)); */
-
+/* background: #162440; */
 }
 html {
   overflow-x: hidden;
@@ -147,11 +147,7 @@ html {
   background-image: url('../../../public/letterbg.avif');
 
 }
-/*
- #467302 dark green
 
- #97BF04 lemon green
 
- #9DBF54 light green
-
-*/
+/* #242f9f --shineway blue */
+/* #fff404 --shineway yellow*/
