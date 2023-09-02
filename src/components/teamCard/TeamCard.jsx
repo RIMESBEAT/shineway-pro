@@ -1,15 +1,8 @@
-'use client'
 import Image from 'next/image'
-import React, { useEffect } from 'react'
+import React from 'react'
 
 const TeamCard = ({name, imgUrl, position}) => {
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      // This code will only execute on the client-side
-      const title = document.querySelector('title');
-      title.innerText = 'Updated Title';
-    }
-  }, []);
+  
   return (
     <div>
       <div className="shadow-lg rounded-lg">

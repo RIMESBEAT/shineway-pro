@@ -35,13 +35,7 @@ const menu = [
 
 const Navbar = () => {
 
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      // This code will only execute on the client-side
-      const title = document.querySelector('title');
-      title.innerText = 'Updated Title';
-    }
-  }, []);
+
 
   const [isToggled, setIsToggled] = useState(false);
   return (

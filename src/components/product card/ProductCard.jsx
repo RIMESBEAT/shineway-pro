@@ -1,15 +1,8 @@
-'use client'
 import Image from "next/image";
-import React, { useEffect } from "react";
+import React from "react";
 
 const ProductCard = ({ imgUrl, name, price, description }) => {
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      // This code will only execute on the client-side
-      const title = document.querySelector('title');
-      title.innerText = 'Updated Title';
-    }
-  }, []);
+  
   return (
     <div className="">
       <div className="scale-up-center relative flex-col bg-[white] rounded-md cursor-pointer shadow-md">
