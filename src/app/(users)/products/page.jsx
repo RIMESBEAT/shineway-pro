@@ -19,7 +19,7 @@ const ProductPage = () => {
               The Power of Golden Six
             </h1>
             <p className=" text-center md:text-start font-bold pt-4">
-              Improve your Kidney's Life, Boost Your Immune System, Protect you
+              Improve your Kidney&apos;s Life, Boost Your Immune System, Protect you
               from Cancer and much More...
             </p>
           </div>
