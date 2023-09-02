@@ -6,7 +6,7 @@ import { products } from "@/global/productData";
 import ProductCard from "@/components/product card/ProductCard";
 import BannerSm from "@/components/banner/bannerSm";
 
-const page = () => {
+const ProductPage = () => {
   const [data, setData] = useState();
   useEffect(() => {
     setData(products);
@@ -63,4 +63,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default ProductPage;

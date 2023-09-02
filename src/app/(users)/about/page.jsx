@@ -31,7 +31,7 @@ Aos.init({
   anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
 });
 
-const page = () => {
+const AboutPage = () => {
  
   return (
     <main>
@@ -240,4 +240,4 @@ personal experiences and with the desire to create a platform where Everyone can
   );
 };
 
-export default page;
+export default AboutPage;
