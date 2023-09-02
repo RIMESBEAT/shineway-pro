@@ -4,7 +4,6 @@ import Golden from "../../../../public/golden.png";
 import Image from "next/image";
 import { products } from "@/global/productData";
 import ProductCard from "@/components/product card/ProductCard";
-import BannerSm from "@/components/banner/bannerSm";
 
 const ProductPage = () => {
   const [data, setData] = useState();
