@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Logo from "../../../public/logo.jpg";
 import Link from "next/link";
 import { XMarkIcon, Bars3BottomRightIcon } from "@heroicons/react/24/solid";
@@ -34,6 +34,15 @@ const menu = [
 ];
 
 const Navbar = () => {
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      // This code will only execute on the client-side
+      const title = document.querySelector('title');
+      title.innerText = 'Updated Title';
+    }
+  }, []);
+
   const [isToggled, setIsToggled] = useState(false);
   return (
     <div className="  sticky top-0 right-0  bg-white/90 backdrop:blur-md py-4  z-20">
