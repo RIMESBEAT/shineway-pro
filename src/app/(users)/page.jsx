@@ -24,7 +24,7 @@ export default function Home() {
 
   useEffect(() => {
     setDifference(whatMakesUsDiff);
-  });
+  }, []);
 
   Aos.init({
    
