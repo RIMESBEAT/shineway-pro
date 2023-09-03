@@ -1,9 +1,8 @@
-"use client";
+'use client'
 import Image from "next/image";
 import Link from "next/link";
 import Lady from "../../../public/lady.png";
 import HappyFamily from "../../../public/happyffam.png";
-import { useEffect, useState } from "react";
 import { products } from "@/global/productData";
 import ProductCard from "@/components/product card/ProductCard";
 import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
@@ -16,20 +15,12 @@ import Slider from "react-slick";
 import TestimonyCard from "@/components/testimonyCard/TestimonyCard";
 
 export default function Home() {
-  const [data, setData] = useState();
-  const [difference, setDifference] = useState();
-  useEffect(() => {
-    setData(products);
-  }, []);
-
-  useEffect(() => {
-    setDifference(whatMakesUsDiff);
-  }, []);
-
+ 
   Aos.init({
    
     disable: false,
     startEvent: "DOMContentLoaded",
+    
     initClassName: "aos-init", 
     animatedClassName: "aos-animate",
     useClassNames: false, 
@@ -132,7 +123,7 @@ export default function Home() {
             Our Products
           </h1>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-            {data?.map((item) => (
+            {products?.map((item) => (
               <div className="" key={item.id}>
                 <ProductCard
                   imgUrl={item.imgUrl}
@@ -167,7 +158,7 @@ export default function Home() {
             What makes Us Different
           </h1>
           <div className=" grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1   gap-8 items-baseline ">
-            {difference?.map((item) => (
+            {whatMakesUsDiff?.map((item) => (
               <div className="bg-transparent shadow-md " key={item.id}>
                 <Image src={item.imgUrl} alt={item.title} className="h-64 w-auto mx-auto max-w-xs " />
                 <p className="capitalize px-2 text-[#242f9f] font-extrabold text-lg py-3">
@@ -193,7 +184,7 @@ export default function Home() {
             What You Might Also Like
           </h1>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-            {data?.slice(0, 4).map((item) => (
+            {products?.slice(0, 4).map((item) => (
               <div
                 className=""
                 key={item.id}
@@ -268,7 +259,7 @@ export default function Home() {
         </h1>
         <div className="">
           <Slider {...settings}>
-            {data?.map((item) => (
+            {products?.map((item) => (
               <div className=" " key={item.id}>
                 <TestimonyCard
                   name={item.name}

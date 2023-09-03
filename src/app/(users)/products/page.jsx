@@ -1,15 +1,14 @@
-"use client";
-import React, { useEffect, useState } from "react";
+
+import React from "react";
 import Golden from "../../../../public/golden.png";
 import Image from "next/image";
 import { products } from "@/global/productData";
 import ProductCard from "@/components/product card/ProductCard";
+import { getProjects } from "../../../../sanity/sanity-utils";
 
-const ProductPage = () => {
-  const [data, setData] = useState();
-  useEffect(() => {
-    setData(products);
-  }, []);
+const ProductPage = async () => {
+
+  const nameData = await getProjects()
   return (
     <main>
       <section className="padding__x bg-orange-500 ">
@@ -41,13 +40,15 @@ const ProductPage = () => {
             </p>
           </div>
           <div className="grid grid-cols-2 mb-20 sm:grid-cols-3 lg:grid-cols-4 gap-4 mt-10 ">
-            {products?.map((item) => (
-              <div className="" key={item.id}>
+            {nameData?.map((item) => (
+              <div className="" key={item._id}>
                 <ProductCard
-                  price={item.price}
+                  
                   imgUrl={item.imgUrl}
                   name={item.name}
-                  description={item.description}
+                  description={item.short_description}
+                  price={item.price}
+                  
                 />
               </div>
             ))}

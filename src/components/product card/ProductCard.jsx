@@ -1,15 +1,21 @@
+
 import Image from "next/image";
 import React from "react";
 
-const ProductCard = ({ imgUrl, name, price, description }) => {
-  
+
+const ProductCard = async ({ imgUrl, name, price, description }) => {
+
   return (
     <div className="">
       <div className="scale-up-center relative flex-col bg-[white] rounded-md cursor-pointer shadow-md">
         <Image
           src={imgUrl}
           alt={name}
-          className="h-64
+          width={720}
+          height={350}
+          loading="lazy"
+          className="
+        
            object-cover  rounded-t-md"
         />
         <div className="flex pt-4 px-2 ">

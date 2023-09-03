@@ -36,7 +36,7 @@ const AboutPage = () => {
   return (
     <main>
       <section className=" relative h-auto w-full   flex bg-[#eae7e4] items-center justify-center ">
-        <Image src={ImgBG} alt="About" className="h-full w-full  " />
+        <Image src={ImgBG} alt="About" width={720}  className="h-full w-full  " />
 
         {/* <div className="absolute padding__x">
           <p className="text-3xl font-extrabold items-center text-orange-500  text-center ">
