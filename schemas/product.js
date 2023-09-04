@@ -61,7 +61,6 @@ export default {
             name: "prescription",
             type: "string",
             title: "Prescription",
-            validation: (Rule) =>Rule.required()
         },
         {
             name: "advisory",
