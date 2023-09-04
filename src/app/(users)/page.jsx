@@ -207,7 +207,7 @@ export default function Home() {
             <Image className=" h-full mx-auto " src={Lady} alt="Lady" />
           </div>
           <div
-            className="flex-1 dark:bg-gray-950 bg-white rounded-md mx-2 py-8 "
+            className="flex-1 dark:bg-gray-950 bg-white rounded-md mx-2 md:mx-4 py-8 "
             data-aos="slide-left"
             data-aos-delay="50"
           >
