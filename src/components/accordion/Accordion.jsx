@@ -9,7 +9,7 @@ const Accordion = ({ title, content }) => {
   };
 
   return (
-    <div className={`${isOpen? "border-blue-900 border-2" : null} rounded-md border p-2`}>
+    <div className={`${isOpen? "border-blue-900 border-2" : "border-2 border-gray-600"} rounded-md border p-2`}>
       <div
         className="flex justify-between items-center cursor-pointer"
         onClick={toggleAccordion}

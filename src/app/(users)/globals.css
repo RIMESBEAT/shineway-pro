@@ -4,19 +4,22 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --font-family: 'Manrope', sans-serif;
+
+  --gradient-text: linear-gradient(89.97deg, #ffc400 1.84%, #242f9f 102.67%);
+  --gradient-bar: linear-gradient(103.22deg, #AE67FA -13.86%, #F49867 99.55%);
+  
+  --color-bg: #040C18;
+  --color-footer : #031B34;
+  --color-blog: #042c54;
+  --color-text: #81AFDD;
+  --color-subtext: #FF8A71;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+
 
 * {
   padding: 0;
@@ -24,28 +27,42 @@
   box-sizing: border-box;
 }
 
-.gradient__bg{
-  background: -moz-radial-gradient(circle at 3% 22%, rgba(151, 191, 4, 1) 0%, rgba(70, 115, 2, 1) 71%);
-
-  background: -webkit-radial-gradient(circle at 3% 22%, rgba(151, 191, 4, 1) 0%, rgba(70, 115, 2, 1) 71%);
-
-  background: -o-radial-gradient(circle at 3% 22%, rgba(151, 191, 4, 1) 0%, rgba(70, 115, 2, 1) 71%);
-
-  background: -ms-radial-gradient(circle at 3% 22%, rgba(151, 191, 4, 1) 0%, rgba(70, 115, 2, 1) 71%);
-
-  background: radial-gradient(circle at 3% 22%, rgba(151, 191, 4, 1) 0%, rgba(70, 115, 2, 1) 71%);
+.focus-outline:focus {
+  outline: 2px solid blue; /* Customize the outline color and style */
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  /* background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb)); */
-/* background: #162440; */
+.bg__gradient{
+  /* ff 3.6+ */
+  background: -moz-radial-gradient(circle at 13% 36%, rgba(4, 44, 84, 1) 0%, rgba(4, 12, 24, 1) 100%);
+
+  /* safari 5.1+,chrome 10+ */
+  background: -webkit-radial-gradient(circle at 13% 36%, rgba(4, 44, 84, 1) 0%, rgba(4, 12, 24, 1) 100%);
+
+  /* opera 11.10+ */
+  background: -o-radial-gradient(circle at 13% 36%, rgba(4, 44, 84, 1) 0%, rgba(4, 12, 24, 1) 100%);
+
+  /* ie 10+ */
+  background: -ms-radial-gradient(circle at 13% 36%, rgba(4, 44, 84, 1) 0%, rgba(4, 12, 24, 1) 100%);
+
+  /* global 92%+ browsers support */
+  background: radial-gradient(circle at 13% 36%, rgba(4, 44, 84, 1) 0%, rgba(4, 12, 24, 1) 100%);
 }
+  
+.glass-card {
+  background: rgba(255, 175, 1, 0.568); /* Adjust the alpha (0.2) for transparency */
+  backdrop-filter: blur(10px); /* Adjust the blur amount as needed */
+  border-radius: 10px; /* Add rounded corners if desired */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+}
+
+.text__gradient{
+  background: var(--gradient-text);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent ;
+}
+
 html {
   overflow-x: hidden;
   font-family: 'Poppins', sans-serif;

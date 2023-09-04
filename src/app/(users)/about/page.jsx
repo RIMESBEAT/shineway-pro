@@ -35,8 +35,8 @@ const AboutPage = () => {
  
   return (
     <main>
-      <section className=" relative h-auto w-full   flex bg-[#eae7e4] items-center justify-center ">
-        <Image src={ImgBG} alt="About" width={720}  className="h-full w-full  " />
+      <section className=" relative h-auto w-full   flex  items-center justify-center ">
+        <Image src={ImgBG} alt="About"  className="h-full w-full  " />
 
         {/* <div className="absolute padding__x">
           <p className="text-3xl font-extrabold items-center text-orange-500  text-center ">
@@ -48,7 +48,7 @@ const AboutPage = () => {
         </div> */}
       </section>
 
-      <section className="padding__x bg-[#eae7e4]" 
+      <section className="padding__x " 
       data-aos="fade-up"
       data-aos-delay="30"
       data-aos-duration="1000"
@@ -68,7 +68,7 @@ const AboutPage = () => {
           </div>
           <div className="flex-1"   
            >
-            <h2 className="text-3xl  font-extrabold text-[#242f9f] py-4">
+            <h2 className="text-3xl  font-extrabold text-[#242f9f] dark:text-white py-4">
               Our story
             </h2>
             <p className=" font-medium text-justify">
@@ -86,7 +86,7 @@ personal experiences and with the desire to create a platform where Everyone can
         <div className="grid grid-cols-1  md:grid-cols-2 gap-8 items-baseline justify-start  py-10 ">
           <div data-aos="slide-top"
              data-aos-delay="50" className=" ">
-            <h1 className="text-center font-bold  text-2xl text-[#242f9f]">
+            <h1 className="text-center font-bold  text-2xl text-[#242f9f] dark:text-white mb-10 pt-10">
               Our Mission
             </h1>
             <p className=" font-medium text-justify">
@@ -95,7 +95,7 @@ personal experiences and with the desire to create a platform where Everyone can
           </div>
           <div data-aos="slide-bottom"
              data-aos-delay="50" className="">
-            <h1 className="text-center font-bold text-2xl text-[#242f9f]">
+            <h1 className="text-center font-bold text-2xl text-[#242f9f] dark:text-white mb-10 pt-10">
               Our Vision
             </h1>
             <p className=" font-medium text-justify">
@@ -122,14 +122,14 @@ personal experiences and with the desire to create a platform where Everyone can
         data-aos-duration="1000"
         data-aos-easing="ease-in-sine"
         data-aos-once="false" className="padding__x relative">
-      <div className=" absolute top-0 left-0 w-full -z-30">
+      {/* <div className=" absolute top-0 left-0 w-full -z-30">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
   <path fill="#eae7e4" fill-opacity="1" d="M0,224L40,213.3C80,203,160,181,240,144C320,107,400,53,480,69.3C560,85,640,171,720,192C800,213,880,171,960,154.7C1040,139,1120,149,1200,176C1280,203,1360,245,1400,266.7L1440,288L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
 </svg>
-        </div>
+        </div> */}
         <div className="grid grid-cols-1  md:grid-cols-2 gap-8 items-baseline justify-start  py-10 ">
           <div className=" ">
-            <h1 className="text-center font-bold  text-2xl text-[#242f9f]">
+            <h1 className="text-center font-bold  text-2xl text-[#242f9f] dark:text-white mb-10 pt-10">
               Our Goals
             </h1>
             <p className=" font-medium text-justify">
@@ -145,7 +145,7 @@ personal experiences and with the desire to create a platform where Everyone can
             </p>
           </div>
           <div className="">
-            <h1 className="text-center font-bold text-2xl text-[#242f9f]">
+            <h1 className="text-center font-bold text-2xl text-[#242f9f] dark:text-white mb-10 pt-10">
               Our Culture
             </h1>
             <p className=" font-medium text-justify">
@@ -165,7 +165,7 @@ personal experiences and with the desire to create a platform where Everyone can
 
         <div className="">
           <div className=" text-center my-10 text-2xl font-extrabold">
-            <h1 className="text-2xl font-bold text-[#242f9f]">The Amazing Team of Us</h1>
+            <h1 className="text-2xl md:text-4xl font-bold text-[#242f9f] dark:text-white mb-10 pt-10">The Amazing Team of Us</h1>
           </div>
           <div className=" block md:flex items-baseline   gap-8">
             <div className="flex-1 my-8 md:my-0 scale-up-center ">
@@ -185,9 +185,9 @@ personal experiences and with the desire to create a platform where Everyone can
         data-aos-duration="1000"
         data-aos-easing="ease-in-sine"
         data-aos-once="false">
-        <div className="mt-10">
+        <div className="mt-10 py-20 ">
           <h1 className="text-2xl font-bold ">Our Offices</h1>
-<div className="pt-8 w-full  md:w-1/2">
+<div className="w-full  md:w-1/2">
       <div className="">
       <Accordion
         title="Ikeja, Lagos"

@@ -12,9 +12,28 @@ export default {
             validation: (Rule) =>Rule.required()
         },
         {
+            title: 'Slug',
+            name: 'slug',
+            type: 'slug',
+            options: {
+              source: 'name',
+              maxLength: 200, // will be ignored if slugify is set
+              slugify: input => input
+                                   .toLowerCase()
+                                   .replace(/\s+/g, '-')
+                                   .slice(0, 200)
+            }
+          },
+        {
             name: "short_description",
             type: "string",
             title: "Short Description",
+            validation: (Rule) =>Rule.required()
+        },
+        {
+            name: "description",
+            type: "string",
+            title: "Description",
             validation: (Rule) =>Rule.required()
         },
         {
@@ -36,7 +55,19 @@ export default {
             name: "dosage",
             type: "string",
             title: "dosage",
+           
+        },
+        {
+            name: "prescription",
+            type: "string",
+            title: "Prescription",
             validation: (Rule) =>Rule.required()
+        },
+        {
+            name: "advisory",
+            type: "string",
+            title: "Advisory",
+           
         },
         
         

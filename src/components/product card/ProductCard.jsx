@@ -7,7 +7,7 @@ const ProductCard = async ({ imgUrl, name, price, description }) => {
 
   return (
     <div className="">
-      <div className="scale-up-center relative flex-col bg-[white] rounded-md cursor-pointer shadow-md">
+      <div className="scale-up-center relative flex-col glass-card  rounded-md cursor-pointer shadow-md  ">
         <Image
           src={imgUrl}
           alt={name}
@@ -19,12 +19,12 @@ const ProductCard = async ({ imgUrl, name, price, description }) => {
            object-cover  rounded-t-md"
         />
         <div className="flex pt-4 px-2 ">
-          <p className="uppercase flex-1 text-[#242f9f] font-bold text-sm line-clamp-1">
+          <p className="uppercase flex-1 text-[#242f9f] dark:text-white font-bold text-sm line-clamp-1">
             {name}
           </p>
         </div>
-        <div className="p-2">
-         <p className="line-clamp-2 text-sm">
+        <div className="p-2 ">
+         <p className="line-clamp-2 text-sm ">
          {description}
           </p>
         </div>

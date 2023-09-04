@@ -1,14 +1,17 @@
-
+ 
 import React from "react";
 import Golden from "../../../../public/golden.png";
 import Image from "next/image";
 import { products } from "@/global/productData";
 import ProductCard from "@/components/product card/ProductCard";
-import { getProjects } from "../../../../sanity/sanity-utils";
+import { getProjects } from "@/app/api/route";
+import Link from "next/link";
 
 const ProductPage = async () => {
 
-  const nameData = await getProjects()
+  
+  const nameData =  await getProjects()
+
   return (
     <main>
       <section className="padding__x bg-orange-500 ">
@@ -30,18 +33,20 @@ const ProductPage = async () => {
       <section className="padding__x">
         <div className="pt-10">
           <div className="text-center">
-            <h1 className="text-2xl text-[#552713]  font-extrabold">
+            <h1 className="text-2xl   font-extrabold">
               Our Products
             </h1>
             <p className="font-bold">
               Our products are{" "}
-              <span className="text-green-600 font-extrabold">100%</span>{" "}
+              <span className=" font-extrabold">100%</span>{" "}
               organic
             </p>
           </div>
           <div className="grid grid-cols-2 mb-20 sm:grid-cols-3 lg:grid-cols-4 gap-4 mt-10 ">
             {nameData?.map((item) => (
               <div className="" key={item._id}>
+                
+                
                 <ProductCard
                   
                   imgUrl={item.imgUrl}
@@ -50,6 +55,7 @@ const ProductPage = async () => {
                   price={item.price}
                   
                 />
+
               </div>
             ))}
           </div>

@@ -9,34 +9,13 @@ import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
 import { whatMakesUsDiff } from "@/global/whatMakesUsDiff";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Aos from "aos";
-import "aos/dist/aos.css";
 import Slider from "react-slick";
 import TestimonyCard from "@/components/testimonyCard/TestimonyCard";
 
-export default function Home() {
- 
-  Aos.init({
-   
-    disable: false,
-    startEvent: "DOMContentLoaded",
-    
-    initClassName: "aos-init", 
-    animatedClassName: "aos-animate",
-    useClassNames: false, 
-    disableMutationObserver: false, 
-    debounceDelay: 50, 
-    throttleDelay: 99, 
-    // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-    offset: 100, 
-    delay: 0, 
-    duration: 400,
-    easing: "ease", 
-    once: false, 
-    mirror: false, 
-    anchorPlacement: "top-bottom", 
-  })
 
+export default function Home() {
+
+ 
   
   const settings = {
     dots: true,
@@ -83,19 +62,19 @@ export default function Home() {
 
   return (
     <>
-      <section className="bg-[#eae7e4] padding__x  ">
+      <section className=" padding__x  ">
         <div className="block  md:flex items-center md:pt-10 pt-24 ">
           <div className=" flex-1 md:mr-8 mr-0">
-            <h1 className="text-[#242f9f] text-4xl lg:text-5xl xl:text-6xl md:text-4xl font-extrabold">
+            <h1 className="text__gradient  text-4xl lg:text-5xl xl:text-6xl md:text-4xl font-extrabold">
               Elevate Your Beauty Journey
             </h1>
-            <p className="my-4 font-semibold">
+            <p className="my-4 ">
               Your Path to Healthy Nourished Skin Start Here! Reveal Your Best
               Skin with Our Transformative Products
             </p>
             <Link
               href="/"
-              className="bg-[#242f9f] rounded-md py-2 px-4  text-white"
+              className="bg__gradient rounded-md py-2 px-4  text-white"
             >
               Read More
             </Link>
@@ -109,17 +88,17 @@ export default function Home() {
         className="relative"
         
       >
-        <div className=" absolute top-0 left-0 w-full -z-30">
+        {/* <div className=" absolute top-0 left-0 w-full -z-30">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
   <path fill="#eae7e4" fill-opacity="1" d="M0,224L40,213.3C80,203,160,181,240,144C320,107,400,53,480,69.3C560,85,640,171,720,192C800,213,880,171,960,154.7C1040,139,1120,149,1200,176C1280,203,1360,245,1400,266.7L1440,288L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
 </svg>
-        </div>
+        </div> */}
         <div className="padding__x " data-aos="fade-up"
         data-aos-delay="30"
         data-aos-duration="1000"
         data-aos-easing="ease-in-sine"
         data-aos-once="false">
-          <h1 className="font-extrabold text-[#242f9f] text-2xl pt-20 text-center mb-10">
+          <h1 className="font-extrabold  text-2xl pt-20 text-center mb-10">
             Our Products
           </h1>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
@@ -136,7 +115,7 @@ export default function Home() {
           </div>
           <div className=" flex  items-center justify-center pt-8">
             <Link
-              className="border flex  border-[#242f9f] py-1 px-4 rounded-md"
+              className="border flex   py-1 px-4 rounded-md"
               href="/products"
             >
               See more
@@ -154,7 +133,7 @@ export default function Home() {
         data-aos-once="false"
       >
         <div className="pt-20">
-          <h1 className="text-2xl font-extrabold text-[#242f9f] text-center py-10">
+          <h1 className="text-2xl font-extrabold  text-center py-10">
             What makes Us Different
           </h1>
           <div className=" grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1   gap-8 items-baseline ">
@@ -180,7 +159,7 @@ export default function Home() {
         data-aos-once="false"
       >
         <div className="pt-10">
-          <h1 className="font-extrabold py-4 text-[#242f9f] text-2xl text-center mb-10">
+          <h1 className="font-extrabold py-4  text-2xl text-center mb-10">
             What You Might Also Like
           </h1>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
@@ -219,12 +198,12 @@ export default function Home() {
         data-aos-easing="ease-in-sine"
         data-aos-once="false"
       >
-        <div className="bg-[#eae7e4] mt-20 block lg:flex items-center pb-8 lg:pb-0">
+        <div className="bg-[#eae7e4] rounded-md mt-20 block lg:flex items-center pb-8 lg:pb-0">
           <div className="flex-1 " data-aos="slide-right" data-aos-delay="50">
             <Image className=" h-full mx-auto " src={Lady} alt="Lady" />
           </div>
           <div
-            className="flex-1 bg-white rounded-md mx-8 py-8 "
+            className="flex-1 dark:bg-gray-900 bg-white rounded-md mx-8 py-8 "
             data-aos="slide-left"
             data-aos-delay="50"
           >
@@ -254,7 +233,7 @@ export default function Home() {
         data-aos-easing="ease-in-sine"
         data-aos-once="false"
       >
-        <h1 className="mt-20 text-2xl text-center text-[#242f9f] font-extrabold ">
+        <h1 className="mt-20 text-2xl text-center  font-extrabold ">
           Testimonies
         </h1>
         <div className="">
