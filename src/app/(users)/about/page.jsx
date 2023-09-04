@@ -36,7 +36,7 @@ const AboutPage = () => {
       
       >
         
-        <div className="block min-h-max py-10 lg:flex items-center">
+        <div className="block min-h-max mt-20 py-10 lg:flex items-center">
           <div className="flex-1  flex items-center justify-center lg:mr-8 ">
             <Image
             
@@ -47,7 +47,7 @@ const AboutPage = () => {
           </div>
           <div className="flex-1"   
            >
-            <h2 className="text-3xl  font-extrabold text-[#242f9f] dark:text-white py-4">
+            <h2 className="text-3xl pt-20 text-center md:text-left  font-extrabold text-[#242f9f] dark:text-white py-4">
               Our story
             </h2>
             <p className=" font-medium text-left">
