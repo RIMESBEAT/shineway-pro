@@ -114,11 +114,15 @@ personal experiences and with the desire to create a platform where Everyone can
             <p className=" font-medium text-left">
             1. To empower individuals by providing them with a flexible business model that allows them to achieve financial freedom and control over their own careers. 
             <br/>
+            <br/>
 2. To deliver exceptional products and services while maintaining the highest standards of quality and customer satisfaction.
+<br/>
 <br/>
 3. To create a robust and supportive network of distributors, offering training, mentorship, and continuous learning opportunities to facilitate their success through Shineway Academy.
 <br/>
+<br/>
 4. To expand our global footprint, reaching new markets and enabling people worldwide to benefit from our MLM platform.
+<br/>
 <br/>
 5. To continuously innovate and adapt to market trends, leveraging technology and industry best practices to stay ahead of the competition.
             </p>
