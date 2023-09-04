@@ -42,7 +42,7 @@ const ProductPage = async () => {
               organic
             </p>
           </div>
-          <div className="grid grid-cols-2 mb-20 sm:grid-cols-3 lg:grid-cols-4 gap-4 mt-10 ">
+          <div className="grid  mb-20 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-10 ">
             {nameData?.map((item) => (
               <div className="" key={item._id}>
                 

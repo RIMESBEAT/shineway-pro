@@ -101,7 +101,7 @@ export default function Home() {
           <h1 className="font-extrabold   text-2xl py-20 text-center ">
             Our Products
           </h1>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {products?.map((item) => (
               <div className="" key={item.id}>
                 <ProductCard
@@ -166,7 +166,7 @@ export default function Home() {
           <h1 className="font-extrabold py-4  text-2xl text-center mb-10">
             What You Might Also Like
           </h1>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {products?.slice(0, 4).map((item) => (
               <div
                 className=""
@@ -202,12 +202,12 @@ export default function Home() {
         data-aos-easing="ease-in-sine"
         data-aos-once="false"
       >
-        <div className="bg-[#eae7e4] rounded-md mt-20 block lg:flex items-center pb-8 lg:pb-0">
+        <div className="bg-[#eae7e4] rounded-md mt-20 block lg:flex items-center pb-2 lg:pb-0">
           <div className="flex-1 " data-aos="slide-right" data-aos-delay="50">
             <Image className=" h-full mx-auto " src={Lady} alt="Lady" />
           </div>
           <div
-            className="flex-1 dark:bg-gray-950 bg-white rounded-md mx-8 py-8 "
+            className="flex-1 dark:bg-gray-950 bg-white rounded-md mx-2 py-8 "
             data-aos="slide-left"
             data-aos-delay="50"
           >
