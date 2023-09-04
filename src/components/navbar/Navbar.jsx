@@ -62,7 +62,7 @@ const Navbar = () => {
       <div className="flex items-center justify-between  padding__x">
         <Link href="/">
           <div className=" flex items-center space-x-3 ">
-            <Image priority src={Logo} alt="Logo" className="h-14 w-14" />
+            <Image priority src={Logo} alt="Logo" className="h-10 w-10" />
             <h1 className="font-extrabold text-2xl  px-2 rounded-md  hidden sm:block text-[#242f9f]">
               Shineway
             </h1>
@@ -90,17 +90,17 @@ const Navbar = () => {
         <div className="lg:hidden block content-center">
           {isToggled ? (
             <XMarkIcon
-              className="w-10 rotate-90-ccw text-[#242f9f]"
+              className="w-10 rotate-90-ccw text-gray-950"
               onClick={() => setIsToggled(false)}
             />
           ) : (
             <Bars3BottomRightIcon
-              className="w-10 text-[#242f9f]"
+              className="w-10 text-gray-950"
               onClick={() => setIsToggled(true)}
             />
           )}
           {isToggled && (
-            <div className=" absolute z-30 capitalize bg-[#242f9f] pr-10 pl-40 rounded-md scale-up-hor-center  py-6 text-end right-5">
+            <div className=" absolute z-30 capitalize bg-gray-900 dark:bg-gray-950 pr-10 pl-40 rounded-md scale-up-hor-center  py-6 text-end right-5">
               {menu?.map((item) => (
                 <div
                   className="mb-6 w-full text-bold text-white last__child"

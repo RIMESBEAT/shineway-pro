@@ -153,7 +153,7 @@ personal experiences and with the desire to create a platform where Everyone can
             </div>
             <div className="flex-1 my-8 md:my-0 scale-up-center">
 
-            <TeamCard name="Mr. Jason Tian" position="Vise Chairman"  imgUrl={Jason}/>
+            <TeamCard name="Mr. Jason Tian" position="Vice Chairman"  imgUrl={Jason}/>
             </div>
           </div>
         </div>
@@ -173,7 +173,7 @@ personal experiences and with the desire to create a platform where Everyone can
         content={<div className="bold"> 
         <p>No.5 Owodumi Street,Off Toyin Street
           Opposite Motayo Hospital Ikeja Lagos</p>
-          <h4 className="font-bold pt-4 ">Customer Care</h4>
+          <h4 className=" pt-4 ">Customer Care</h4>
           <p className="py-3"> Airtel: <span className="font-bold">09028712535 </span></p>
        <p className=""> Mtn: <span className="font-bold">07034283680 </span></p>
           </div>
@@ -190,7 +190,7 @@ personal experiences and with the desire to create a platform where Everyone can
 
         No.41 Idoro Road, opposite Opulent Dynamic Filling Station Uyo
        </p>
-       <h4 className="font-bold pt-4 ">Customer Care</h4>
+       <h4 className=" pt-4 ">Customer Care</h4>
        <p className="py-3"> Airtel: <span className="font-bold">09028712535 </span></p>
        <p className=""> Mtn: <span className="font-bold">07034283680 </span></p>
         </div>}

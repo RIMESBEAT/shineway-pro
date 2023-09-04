@@ -14,7 +14,7 @@ const Accordion = ({ title, content }) => {
         className="flex justify-between items-center cursor-pointer"
         onClick={toggleAccordion}
       >
-        <h2 className="text-lg font-semibold">{title}</h2>
+        <h2 className="text-lg ">{title}</h2>
         <span className="text-gray-600">{isOpen ? '▲' : '▼'}</span>
       </div>
       {isOpen && <div className="mt-2 ">{content}</div>}

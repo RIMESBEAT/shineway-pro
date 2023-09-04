@@ -86,7 +86,7 @@ html {
     padding: 4rem;
   }
   .padding__x {
-    padding: 0 4rem;
+    padding: 0 3rem;
   }
 }
 
@@ -95,7 +95,7 @@ html {
     padding: 4rem 2rem;
   }
   .padding__x {
-    padding: 0 2rem;
+    padding: 0 1rem;
   }
 }
 

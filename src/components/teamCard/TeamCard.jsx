@@ -8,8 +8,8 @@ const TeamCard = ({name, imgUrl, position}) => {
       <div className="shadow-lg rounded-lg">
         <Image src={imgUrl} className='h-80 rounded-lg w-full object-cover object-top' alt='name' />
         <div className=" px-4 py-2 ">
-            <h1 className='font-bold text-lg py-1 text-[#242f9f]'>{name}</h1>
-            <p className='font-bold text-sm'>{position}</p>
+            <h1 className='font-bold text-lg py-1 text-[#242f9f] dark:text-white'>{name}</h1>
+            <p className='font-bold text-sm dark:text-gray-400'>{position}</p>
         </div>
       </div>
     </div>
