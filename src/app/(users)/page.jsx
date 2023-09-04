@@ -214,7 +214,7 @@ export default function Home() {
             <h1 className="text-2xl text-center  font-extrabold text-[#242f9f] dark:text-white">
               About Us
             </h1>
-            <p className="px-4 md:px-8 text-justify  ">
+            <p className="px-4 md:px-8 text-left  ">
             SHINEWAY is a Pharmaceutical company which began her operations in the year 1970, Producing over 400 different Pharmaceutical Products.  Shineway is known for producing Traditional Chinese Medicine, with seven factories across China, has two Headquarters, situated in Hong Kong and Shjiazhuang, Hebei. 
             </p>
             <div className=" flex  items-center justify-center pt-8">
