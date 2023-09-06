@@ -24,8 +24,8 @@ const ProductCard = async ({ imgUrl, name, price, description }) => {
             {name}
           </p>
         </div>
-        <div className="p-2 ">
-         <p className="line-clamp-2 text-sm ">
+        <div className="p-2  ">
+         <p className="line-clamp-2 text-sm dark:text-gray-300">
          {description}
           </p>
         </div>

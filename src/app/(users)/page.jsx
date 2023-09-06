@@ -154,7 +154,7 @@ export default function Home() {
                 <p className="capitalize px-2 text-[#242f9f] dark:text-white  font-extrabold text-lg py-3">
                   {item.title}
                 </p>
-                <p className="px-2 pb-4 font">{item.description}</p>
+                <p className="px-2 pb-4 font dark:text-gray-300">{item.description}</p>
       </div>
 
 
@@ -229,7 +229,7 @@ export default function Home() {
             </p>
             <div className=" flex  items-center justify-center pt-8">
               <Link
-                className="border flex  border-[#242f9f] py-1 px-4 rounded-md"
+                className="border flex  border-[#242f9f] dark:border-white py-1 px-4 rounded-md"
                 href="/about"
               >
                 See more
