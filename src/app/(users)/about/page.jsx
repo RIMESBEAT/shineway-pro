@@ -15,7 +15,7 @@ const AboutPage = () => {
   return (
     <main>
       <section className=" relative h-auto w-full   flex  items-center justify-center ">
-        <Image src={ImgBG} alt="About"  className="h-full w-full  " />
+        <Image src={ImgBG} alt="About" width="100%"  className="h-full   " />
 
         {/* <div className="absolute padding__x">
           <p className="text-3xl font-extrabold items-center text-orange-500  text-center ">
@@ -36,7 +36,7 @@ const AboutPage = () => {
       
       >
         
-        <div className="block min-h-max mt-20 py-10 lg:flex items-center">
+        <div className="block min-h-max mt-10 py-5 lg:flex items-center">
           <div className="flex-1  flex items-center justify-center lg:mr-8 ">
             <Image
             
@@ -148,7 +148,7 @@ personal experiences and with the desire to create a platform where Everyone can
 
         <div className="">
           <div className=" text-center my-10 text-2xl font-extrabold">
-            <h1 className="text-2xl md:text-4xl font-bold text-[#242f9f] dark:text-white mb-10 pt-10">The Amazing Team of Us</h1>
+            <h1 className="text-2xl md:text-4xl font-bold text-[#242f9f] dark:text-white mb-10 ">The Amazing Team of Us</h1>
           </div>
           <div className=" block md:flex items-baseline   gap-8">
             <div className="flex-1 my-8 md:my-0 scale-up-center ">

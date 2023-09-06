@@ -115,7 +115,10 @@ const Navbar = () => {
                   </Link>
                 </div>
               ))}
+              <div className="bg-gray-300 dark:bg-gray-900 py-1 rounded-md flex justify-center mx-auto">
+
                <ThemeButton/>
+              </div>
             </div>
           )}
         </div>

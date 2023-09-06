@@ -48,13 +48,7 @@
   background: radial-gradient(circle at 13% 36%, rgba(4, 44, 84, 1) 0%, rgba(4, 12, 24, 1) 100%);
 }
   
-.glass-card {
-  background: rgba(255, 175, 1, 0.568); /* Adjust the alpha (0.2) for transparency */
-  backdrop-filter: blur(10px); /* Adjust the blur amount as needed */
-  border-radius: 10px; /* Add rounded corners if desired */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  
-}
+
 
 .text__gradient{
   background: var(--gradient-text);
@@ -100,6 +94,7 @@ html {
 }
 
 .scale-up-hor-center {
+  
   -webkit-animation: scale-up-hor-center 0.4s
     cubic-bezier(0.39, 0.575, 0.565, 1) both;
   animation: scale-up-hor-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
@@ -152,6 +147,9 @@ html {
   }
 }
 
+.scale-up-center{
+  transition: 0.5s ease-in-out;
+}
 .scale-up-center:hover {
   transition: 0.5s ease-in-out ;
   transition-duration: 0.5s;

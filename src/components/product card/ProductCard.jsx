@@ -7,7 +7,7 @@ const ProductCard = async ({ imgUrl, name, price, description }) => {
 
   return (
     <div className="">
-      <div className="scale-up-center relative flex-col glass-card  rounded-md cursor-pointer shadow-md  ">
+      <div className="scale-up-center relative flex-col rounded-md cursor-pointer shadow-md dark:shadow-md dark:shadow-slate-800 dark:border-gray-300 dark:border  ">
         <Image
           src={imgUrl}
           alt={name}
