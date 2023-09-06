@@ -1,4 +1,4 @@
-"use client"
+
 import React from "react";
 import ImgBG from "../../../../public/headoffice.jpg";
 import Image from "next/image";
@@ -7,10 +7,13 @@ import Jack from "../../../../public/jacksm.png"
 import Jason from "../../../../public/jason.png"
 import Link from "next/link";
 import Accordion from "@/components/accordion/Accordion";
+import {  getTeamData } from "../../../../sanity/sanity-utils";
 
 
 
-const AboutPage = () => {
+const AboutPage = async () => {
+
+const teamData = await getTeamData()
  
   return (
     <main className=" overflow-x-hidden">
@@ -150,16 +153,22 @@ personal experiences and with the desire to create a platform where Everyone can
           <div className=" text-center my-10 text-2xl font-extrabold">
             <h1 className="text-2xl md:text-4xl font-bold text-[#242f9f] dark:text-white mb-10 ">The Amazing Team of Us</h1>
           </div>
-          <div className=" block md:flex items-baseline   gap-8">
-            <div className="flex-1 my-8 md:my-0 scale-up-center ">
+          <div className=" grid grid-cols-1   sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+           
 
-            <TeamCard name="Mr. Jack Wang" position="CEO"  imgUrl={Jack}/>
-            </div>
-            <div className="flex-1 my-8 md:my-0 scale-up-center">
+            {
+              teamData?.map((item)=>(
+                <div className="scale-up-center " key={item._id}>
 
-            <TeamCard name="Mr. Jason Tian" position="Vice Chairman"  imgUrl={Jason}/>
+
+                  <TeamCard name={item.name} position={item.position} imgUrl={item.imgUrl} />
+                </div>
+              ))
+            }
             </div>
-          </div>
+            
+            
+         
         </div>
       </section>
 

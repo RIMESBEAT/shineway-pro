@@ -1,7 +1,8 @@
 import complan from './schemas/complan'
+import ourTeam from './schemas/ourTeam'
 import post from './schemas/post'
 import product from './schemas/product'
 
 export const schema = {
-  types: [post, product, complan],
+  types: [post, product, complan, ourTeam],
 }

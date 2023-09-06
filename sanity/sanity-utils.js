@@ -15,3 +15,13 @@ export const getProjects = async ()=>(
             _createdAt} `
     )
 )
+export const getTeamData = async ()=>(
+    await createClient(projectClient).fetch(
+       groq `*[_type == "ourTeam"]{
+            name,
+            "imgUrl":imgUrl.asset->url,
+            position, 
+            _id,
+            _createdAt} `
+    )
+)

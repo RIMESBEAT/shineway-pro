@@ -139,13 +139,13 @@ export default function Home() {
           </h1>
           <div className=" grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1   gap-8 items-center justify-between h-full ">
             {whatMakesUsDiff?.map((item) => (
-              <div className="bg-transparent shadow-md dark:shadow-md rounded-md dark:shadow-slate-800 dark:border-gray-300 dark:border h-full" key={item.id}>
+              <div className="bg-transparent scale-up-center shadow-md dark:shadow-md rounded-md dark:shadow-slate-800 dark:border-gray-300 dark:border h-full" key={item.id}>
              
 
-<div className="">
+<div className=" h-fit w-1/3  mx-auto">
 
 
-                <Image src={item.imgUrl} alt={item.title} height={150} width={150} className=" pt-6 h-full  mx-auto object-cover " />
+                <Image src={item.imgUrl} alt={item.title}   className=" h-full  pt-4  mx-auto object-cover " />
 </div>
       
       <div className=" items-baseline flex-col ">
