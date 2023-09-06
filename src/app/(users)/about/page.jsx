@@ -13,7 +13,7 @@ import Accordion from "@/components/accordion/Accordion";
 const AboutPage = () => {
  
   return (
-    <main>
+    <main className=" overflow-x-hidden">
       <section className=" relative h-auto w-full   flex  items-center justify-center ">
         <Image src={ImgBG} alt="About" width="100%"  className="h-full   " />
 
