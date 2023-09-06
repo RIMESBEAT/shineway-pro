@@ -11,12 +11,13 @@ import { whatMakesUsDiff } from "@/global/whatMakesUsDiff";
 // import "slick-carousel/slick/slick-theme.css";
 // import Slider from "react-slick";
 import TestimonyCard from "@/components/testimonyCard/TestimonyCard";
+import { getProjects } from "../../../sanity/sanity-utils";
 
 
 
-export default function Home() {
+export default async function  Home() {
 
-
+const productData = await getProjects()
   
   // const settings = {
   //   dots: true,
@@ -103,13 +104,13 @@ export default function Home() {
             Our Products
           </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {products?.map((item) => (
-              <div className="" key={item.id}>
+            {productData?.slice(0, 8).map((item) => (
+              <div className="" key={item._id}>
                 <ProductCard
                   imgUrl={item.imgUrl}
                   name={item.name}
                   price={item.price}
-                  description={item.description}
+                  description={item.short_description}
                 />
               </div>
             ))}
@@ -177,7 +178,7 @@ export default function Home() {
             What You Might Also Like
           </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {products?.slice(0, 4).map((item) => (
+            {productData?.slice(0, 4).map((item) => (
               <div
                 className=""
                 key={item.id}
