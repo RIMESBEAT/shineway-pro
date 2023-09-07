@@ -25,3 +25,10 @@ export const getTeamData = async ()=>(
             _createdAt} `
     )
 )
+export const getComplan = async ()=>(
+    await createClient(projectClient).fetch(
+       groq `*[_type == "complan"]{
+       "pdf_file": pdf_file.asset->url,
+           } `
+    )
+)

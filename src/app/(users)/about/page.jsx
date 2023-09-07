@@ -7,14 +7,17 @@ import Jack from "../../../../public/jacksm.png"
 import Jason from "../../../../public/jason.png"
 import Link from "next/link";
 import Accordion from "@/components/accordion/Accordion";
-import {  getTeamData } from "../../../../sanity/sanity-utils";
+import {  getComplan, getTeamData } from "../../../../sanity/sanity-utils";
 
 
 
 const AboutPage = async () => {
 
 const teamData = await getTeamData()
- 
+const complanFile = await getComplan()
+  
+console.log(complanFile[0].pdf_file);
+
   return (
     <main className=" overflow-x-hidden">
       <section className=" relative h-auto w-full   flex  items-center justify-center ">
@@ -93,9 +96,9 @@ personal experiences and with the desire to create a platform where Everyone can
         data-aos-easing="ease-in-sine"
         data-aos-once="false">
         <div className=" justify-center bg-[#eae7e4] py-6 flex">
-          <button className="bg-[#242f9f] rounded-md py-2 px-3 text-lg font-bold text-white text-center">
+          <a target="_blank" href={`${complanFile[0].pdf_file}?dl=`} className="bg-[#242f9f] rounded-md py-2 px-3 text-lg font-bold text-white text-center">
             Download Our Complan Here
-          </button>
+          </a>
         </div>
       </section>
 

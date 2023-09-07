@@ -3,72 +3,60 @@ import React from 'react'
 
 const Contact = () => {
   return (
-    <main>
+    <main className=' '>
       
-<div className="padding__x">
-    <div className="">
+     
+
+<div className="text-center">
+    <h1 className=' text-2xl md:text-4xl'>Contact Us</h1>
+
+    <p>Fill up the form our team will get back to you within 24 hours</p>
+</div>
+
+
+<form action="" className='justify-center flex-col flex items-center py-10 '>
+    <div className="block md:flex items-center justify-center gap-8 w-full">
         <div className="">
-            <h1>Contact Information</h1>
-            <p>Fill in valid information in the respective spaces below. All fields are required.</p>
-            <div className=" flex items-center gap-4">
-<div className="bg-slate-900 flex-1"></div>
-<form action="" className='w-full flex-1'>
-<div className="block md:flex gap-4 ">
-<div className=" flex-1 ">
-        <label htmlFor="">First Name *</label>
-    <input className='w-full  p-2 outline-none border border-gray-500 rounded-sm' type="text" placeholder="First Name" />
-
-    </div>
-    <div className=" flex-1 ">
-        <label htmlFor="">Last Name *</label>
-    <input className='w-full  p-2 outline-none border border-gray-500 rounded-sm' type="text" placeholder="Last Name" />
-
-    </div>
-</div>
-<div className="block md:flex gap-4 ">
-<div className=" flex-1 ">
-        <label htmlFor="">Phone *</label>
-    <input className='w-full  p-2 outline-none border border-gray-500 rounded-sm' type="tel" placeholder="Phone" />
-
-    </div>
-    <div className=" flex-1 ">
-        <label htmlFor="">Subject *</label>
-    <input className='w-full  p-2 outline-none border border-gray-500 rounded-sm' type="text" placeholder="Name" />
-
-    </div>
-</div>
-
-<div className="block md:flex gap-10 items-center">
-
-<div className="flex-1">
-    <label htmlFor="">Message *</label>
-
-    <textarea className='w-full  p-2 outline-none border border-gray-500 rounded-sm' placeholder="Write Your Message"></textarea>
-
-    </div>
-</div>
-    <div className="">
-
-    <input  type="submit" value="Submit" />
-    </div>
-   
-    
-   
-    
-    
-    
-   
- 
-  
-</form>
-            </div>
+<label >First Name</label>
+<br />
+<input type="text" />
         </div>
+        <div className="">
+        <label >Last Name</label>
+        <br />
+<input type="text" />
+        </div>
+    </div>
+    <div className="block md:flex items-center justify-center gap-8">
+        <div className="flex-1">
+<label >Email Address</label>
+<br />
+<input type="text" />
+        </div>
+        <div className="flex-1">
+        <label >Last Name</label>
+        <br />
+<input type="text" />
+        </div>
+    </div>
+        <div className="">
+           <label > Message Us</label>
+
+
+<br />
+           <textarea className='flex-1' />
+
+        </div>
+</form>
+
+<div className="">
+
+</div>
+     
         <div className="">
             socials
         </div>
-    </div>
-    <div className=""></div>
-</div>
+
     </main>
   )
 }

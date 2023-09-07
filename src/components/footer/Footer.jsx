@@ -18,7 +18,7 @@ const Footer = () => {
          <p className='font-bold text-xl uppercase '>Shineway Healthcare</p>
           </div>
           <div className="py-6 mr-0 md:mr-8 ">
-            <p className='font-semibold text-sm text-left'>SHINEWAY is a Pharmaceutical company which began her operations in the year 1970, Producing over 400 different Pharmaceutical Products. Shineway is known for producing Traditional Chinese Medicine, with seven factories across China, has two Headquarters, situated in Hong Kong and Shjiazhuang, Hebei.</p>
+            <p className='text-gray-300 text-sm text-left'>SHINEWAY is a Pharmaceutical company which began her operations in the year 1970, Producing over 400 different Pharmaceutical Products. Shineway is known for producing Traditional Chinese Medicine, with seven factories across China, has two Headquarters, situated in Hong Kong and Shjiazhuang, Hebei.</p>
           </div>
         </div>
         <div className=" flex flex-1 justify-between  gap-8 ">
