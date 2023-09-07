@@ -15,8 +15,7 @@ const AboutPage = async () => {
 
 const teamData = await getTeamData()
 const complanFile = await getComplan()
-  
-console.log(complanFile[0].pdf_file);
+
 
   return (
     <main className=" overflow-x-hidden">

@@ -17,7 +17,7 @@ export const getProjects = async ()=>(
 )
 export const getTeamData = async ()=>(
     await createClient(projectClient).fetch(
-       groq `*[_type == "ourTeam"]{
+       groq `*[_type == "ourTeam"] | order(publishedDate desc){
             name,
             "imgUrl":imgUrl.asset->url,
             position, 
@@ -27,7 +27,7 @@ export const getTeamData = async ()=>(
 )
 export const getComplan = async ()=>(
     await createClient(projectClient).fetch(
-       groq `*[_type == "complan"]{
+       groq `*[_type == "complan"] | order(publishedDate asc){
        "pdf_file": pdf_file.asset->url,
            } `
     )
