@@ -143,7 +143,7 @@ const productData = await getProjects()
               <div className="bg-transparent scale-up-center shadow-md dark:shadow-md rounded-md dark:shadow-slate-800 dark:border-gray-300 dark:border h-full" key={item.id}>
              
 
-<div className=" h-fit w-1/3  mx-auto">
+<div className=" h-fit w-2/3  mx-auto">
 
 
                 <Image src={item.imgUrl} alt={item.title}   className=" h-full  pt-4  mx-auto object-cover " />
@@ -152,10 +152,10 @@ const productData = await getProjects()
       <div className=" items-baseline flex-col ">
 
 
-                <p className="capitalize px-2 text-[#242f9f] dark:text-white  font-extrabold text-lg py-3">
+                <p className="capitalize px-2 text-[#242f9f] text-center dark:text-white  font-extrabold text-2xl py-3">
                   {item.title}
                 </p>
-                <p className="px-2 pb-4 font dark:text-gray-300">{item.description}</p>
+                {/* <p className="px-2 pb-4 font dark:text-gray-300">{item.description}</p> */}
       </div>
 
 
@@ -189,7 +189,7 @@ const productData = await getProjects()
                   imgUrl={item.imgUrl}
                   name={item.name}
                   price={item.price}
-                  description={item.description}
+                  description={item.short_description}
                 />
               </div>
             ))}

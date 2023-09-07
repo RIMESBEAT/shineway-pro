@@ -2,7 +2,7 @@ export const whatMakesUsDiff = [
   {
     id: 1,
 
-    title: "100% profit ",
+    title: "100% natural ",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus tempora doloribus asperiores praesentium sapiente obcaecati illum magni consequatur distinctio adipisci.",
     imgUrl: require("../../public/100percent.png"),
