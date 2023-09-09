@@ -3,8 +3,7 @@ import React from "react";
 import ImgBG from "../../../../public/headoffice.jpg";
 import Image from "next/image";
 import TeamCard from "@/components/teamCard/TeamCard";
-import Jack from "../../../../public/jacksm.png"
-import Jason from "../../../../public/jason.png"
+
 import Link from "next/link";
 import Accordion from "@/components/accordion/Accordion";
 import {  getComplan, getTeamData } from "../../../../sanity/sanity-utils";

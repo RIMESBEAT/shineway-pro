@@ -2,10 +2,12 @@ import {  createClient, groq } from "next-sanity"
 import { apiVersion, dataset, projectId, useCdn } from "../../../env";
 
 
-export const projectClient = {apiVersion, dataset, projectId, useCdn}
+export const projectClient = createClient({
+    apiVersion, dataset, projectId, useCdn 
+})
 
 export const getProjects = async ()=>(
-    await createClient(projectClient).fetch(
+    await projectClient.fetch(
        groq `*[_type == "product"]{
             name,
             "imgUrl":imgUrl.asset->url,

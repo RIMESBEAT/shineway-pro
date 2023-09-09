@@ -1,23 +1,31 @@
 import {  createClient, groq } from "next-sanity"
-import { apiVersion, dataset, projectId, useCdn } from "../env";
+import { client } from "../env"
 
 
-export const projectClient = {apiVersion, dataset, projectId, useCdn}
+
+
 
 export const getProjects = async ()=>(
-    await createClient(projectClient).fetch(
+    await client.fetch(
        groq `*[_type == "product"]{
             name,
             "imgUrl":imgUrl.asset->url,
             short_description, 
+            slug,
             price,
             _id,
             _createdAt} `
     )
 )
+
+
+
+
+
+
 export const getTeamData = async ()=>(
-    await createClient(projectClient).fetch(
-       groq `*[_type == "ourTeam"] | order(publishedDate desc){
+    await client.fetch(
+       groq `*[_type == "ourTeam"] | order(publishedDate asc){
             name,
             "imgUrl":imgUrl.asset->url,
             position, 
@@ -26,9 +34,23 @@ export const getTeamData = async ()=>(
     )
 )
 export const getComplan = async ()=>(
-    await createClient(projectClient).fetch(
-       groq `*[_type == "complan"] | order(publishedDate asc){
+    await client.fetch(
+       groq `*[_type == "complan"] {
        "pdf_file": pdf_file.asset->url,
            } `
+    )
+)
+
+export const getPost = async ()=>(
+    await client.fetch(
+       groq `*[_type == "post" ] | order(_createdAt desc) {
+        title,
+          description,
+          body,
+          "imgUrl":imgUrl.asset->url,
+          slug,
+          _createdAt
+      }
+      `
     )
 )

@@ -46,7 +46,9 @@ const ProductPage = async () => {
             {productData?.map((item) => (
               <div className="" key={item._id}>
                 
-                
+                <Link href={`/products/${item.slug.current}`}>
+
+
                 <ProductCard
                   
                   imgUrl={item.imgUrl}
@@ -55,6 +57,7 @@ const ProductPage = async () => {
                   price={item.price}
                   
                 />
+                </Link>
 
               </div>
             ))}
