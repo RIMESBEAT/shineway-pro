@@ -20,10 +20,10 @@ const BlogPage = async () => {
 </span>
 </Link>
 
-    <div className="my-10 grid grid-flow-col grid-cols-2 gap-4 shadow-lg p-4 rounded-md mb-10">
+    <div className="my-10 grid grid-flow-col grid-cols-2 gap-4  p-4 rounded-md mb-10">
 {
   postData?.map((item)=>(
-   <div className="" key={item._id}>
+   <div className=" shadow-lg" key={item._id}>
 <Link href={item.slug} className=" " >
       <Article title={item.title} imgUrl={item.imgUrl} description={item.description} _createdAt={item._createdAt}/>
      

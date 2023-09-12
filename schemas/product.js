@@ -32,9 +32,10 @@ export default {
         },
         {
             name: "description",
-            type: "string",
+            type: "array",
             title: "Description",
-            validation: (Rule) =>Rule.required()
+            validation: (Rule) =>Rule.required(),
+            of: [{type: 'string'}, ]
         },
         {
             name: "imgUrl",
