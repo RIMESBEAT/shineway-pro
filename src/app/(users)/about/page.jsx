@@ -220,7 +220,7 @@ const complanFile = await getComplan()
         <div className="  text-white padding__x">
           <h1 className="text-extrabold text-2xl md:text-4xl text-center">Let Us Keep You Updated</h1>
 <p className="py-6 text-sm md:text-lg text-center">Subscribe to Our Newsletter to Stay Updated and notified about Our New Products and Services</p>
-          <div className="bg-white  px-3 rounded-md flex">
+          <div className="bg-white  px-2 rounded-md flex">
             <input type="email" className="outline-none py-3 bg-transparent text-black flex-1" placeholder="enter your email" />
             <button className="bg-blue-700 px-1 my-1 rounded-md">Subscribe</button>
           </div>
