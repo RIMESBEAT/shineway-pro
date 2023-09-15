@@ -20,7 +20,7 @@ const BlogPage = async () => {
 </span>
 </Link>
 
-    <div className="my-10  grid  grid-cols-1 md:grid-cols-2 gap-4  p-4 rounded-md mb-10">
+    <div className="my-10  grid  grid-cols-1 md:grid-cols-2 gap-4 rounded-md mb-10">
 {
   postData?.map((item)=>(
    <div className=" shadow-lg" key={item._id}>
