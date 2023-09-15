@@ -25,7 +25,7 @@ export const getProjects = async ()=>(
 
 export const getTeamData = async ()=>(
     await client.fetch(
-       groq `*[_type == "ourTeam"] | order(publishedDate asc){
+       groq `*[_type == "ourTeam"] | order(_createdAt asc){
             name,
             "imgUrl":imgUrl.asset->url,
             position, 

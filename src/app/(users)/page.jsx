@@ -106,12 +106,15 @@ const productData = await getProjects()
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {productData?.slice(0, 4).map((item) => (
               <div className="" key={item._id}>
+              <Link href={`/products/${item.slug.current}`}>
+              
                 <ProductCard
                   imgUrl={item.imgUrl}
                   name={item.name}
                   price={item.price}
                   description={item.short_description}
                 />
+              </Link>
               </div>
             ))}
           </div>
@@ -178,19 +181,22 @@ const productData = await getProjects()
             What You Might Also Like
           </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {productData?.slice(0, 4).map((item) => (
+            {productData?.slice(4,8).map((item) => (
               <div
                 className=""
                 key={item.id}
                 data-aos="slide-right"
                 data-aos-delay="30"
               >
-                <ProductCard
+                <Link href={`/products/${item.slug.current}`}>
+                   <ProductCard
                   imgUrl={item.imgUrl}
                   name={item.name}
                   price={item.price}
                   description={item.short_description}
                 />
+                </Link>
+             
               </div>
             ))}
           </div>

@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
       <body className={`${inter.className} bg-gray-200 text-black dark:bg-gray-900   dark:text-white h-full `}>
        <Provider>
 
-
+<main>
 
         <Navbar />
 
@@ -25,7 +25,9 @@ export default function RootLayout({ children }) {
 
         {children}
         <Footer />
+</main>
        </Provider>
+
       </body>
     </html>
   );

@@ -75,23 +75,6 @@ html {
 
 } */
 
-@media screen and (max-width: 1060px) {
-  .padding {
-    padding: 4rem;
-  }
-  .padding__x {
-    padding: 0 3rem;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .padding {
-    padding: 4rem 2rem;
-  }
-  .padding__x {
-    padding: 0 1rem;
-  }
-}
 
 .scale-up-hor-center {
   
@@ -162,6 +145,30 @@ html {
   background-image: url('../../../public/letterbg.avif');
 
 }
+
+
+@media screen and (max-width: 1060px) {
+  .padding {
+    padding: 4rem;
+  }
+  .padding__x {
+    padding: 0 3rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .padding {
+    padding: 4rem 2rem;
+  }
+  .padding__x {
+    padding: 0 1rem;
+  }
+  .scale-up-center:hover{
+    transform: scale(1);
+  }
+}
+
+
 
 /* #242f9f --shineway blue */
 /* #fff404 --shineway yellow*/

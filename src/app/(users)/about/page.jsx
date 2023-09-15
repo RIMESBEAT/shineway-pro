@@ -151,12 +151,12 @@ const complanFile = await getComplan()
           <div className=" text-center my-10 text-2xl font-extrabold">
             <h1 className="text-2xl md:text-4xl font-bold text-[#242f9f] dark:text-white mb-10 ">The Amazing Team of Us</h1>
           </div>
-          <div className=" grid grid-cols-1   sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div className=" flex flex-col sm:flex-row gap-8 justify-center ">
            
 
             {
               teamData?.map((item)=>(
-                <div className="scale-up-center " key={item._id}>
+                <div className="scale-up-center md:max-w-[300px] " key={item._id}>
 
 
                   <TeamCard name={item.name} position={item.position} imgUrl={item.imgUrl} />
@@ -216,13 +216,13 @@ const complanFile = await getComplan()
         data-aos-delay="30"
         data-aos-duration="1000"
         data-aos-easing="ease-in-sine"
-        data-aos-once="false" className="py-10 letter__bg items-center justify-center flex" >
+        data-aos-once="false" className="py-10 letter__bg items-center justify-center flex " >
         <div className="  text-white padding__x">
           <h1 className="text-extrabold text-2xl md:text-4xl text-center">Let Us Keep You Updated</h1>
 <p className="py-6 text-sm md:text-lg text-center">Subscribe to Our Newsletter to Stay Updated and notified about Our New Products and Services</p>
-          <div className="bg-white py-2 px-3 rounded-md flex">
+          <div className="bg-white  px-3 rounded-md flex">
             <input type="email" className="outline-none py-3 bg-transparent text-black flex-1" placeholder="enter your email" />
-            <button className="bg-blue-700 py-3 px-1 rounded-md">Subscribe Now</button>
+            <button className="bg-blue-700 px-1 my-1 rounded-md">Subscribe</button>
           </div>
         </div>
       </section>
