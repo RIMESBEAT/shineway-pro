@@ -97,7 +97,7 @@ product.dosage && (
        {
            product.advisory && (
               <div className="">
-                <p>Warning</p>
+                <p className="py-2  text-xl font-medium">Warning</p>
                 <p className="bg-red-500">{product.advisory}</p>
               </div>
             )
