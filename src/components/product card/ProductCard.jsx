@@ -29,7 +29,7 @@ const ProductCard = async ({ imgUrl, name, price, description }) => {
          {description}
           </p>
         </div>
-          <p className=" text-white bg-[#242f9f]  absolute top-3 rounded-sm right-2 text-center p-1 font-bold text-sm">N {price.toLocaleString()} </p>
+          {/* <p className=" text-white bg-[#242f9f]  absolute top-3 rounded-sm right-2 text-center p-1 font-bold text-sm">N {price.toLocaleString()} </p> */}
       </div>
     </div>
   );

@@ -75,7 +75,7 @@ const productData = await getProjects()
               Skin with Our Transformative Products
             </p>
             <Link
-              href="/"
+              href="/about"
               className="bg-blue-700 rounded-md py-2 px-4  text-white"
             >
               Read More
@@ -111,7 +111,7 @@ const productData = await getProjects()
                 <ProductCard
                   imgUrl={item.imgUrl}
                   name={item.name}
-                  price={item.price}
+                  // price={item.price}
                   description={item.short_description}
                 />
               </Link>
@@ -192,7 +192,7 @@ const productData = await getProjects()
                    <ProductCard
                   imgUrl={item.imgUrl}
                   name={item.name}
-                  price={item.price}
+                  // price={item.price}
                   description={item.short_description}
                 />
                 </Link>

@@ -31,7 +31,7 @@ const ProductDetails = async ({params: {slug}}) => {
       <div className="flex-1 relative">
       <Image width={750} height={250} src={product.imgUrl}  alt={product.name} className="rounded-lg mb-10"/>
       
-      <p className="absolute top-6 right-6 bg-blue-900 p-1 px-2 text-white  rounded-sm font-bold">N{product.price.toLocaleString()}</p>
+      {/* <p className="absolute top-6 right-6 bg-blue-900 p-1 px-2 text-white  rounded-sm font-bold">N{product.price.toLocaleString()}</p> */}
       
       {
         product.ingredient && (

@@ -54,7 +54,7 @@ const ProductPage = async () => {
                   imgUrl={item.imgUrl}
                   name={item.name}
                   description={item.short_description}
-                  price={item.price}
+                  // price={item.price}
                   
                 />
                 </Link>
