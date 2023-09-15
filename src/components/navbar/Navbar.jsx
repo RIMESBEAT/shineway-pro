@@ -90,12 +90,12 @@ const Navbar = () => {
         <div className="lg:hidden block content-center">
           {isToggled ? (
             <XMarkIcon
-              className="w-10 rotate-90-ccw text-gray-950"
+              className="w-10 rotate-90-ccw "
               onClick={() => setIsToggled(false)}
             />
           ) : (
             <Bars3BottomRightIcon
-              className="w-10 text-gray-950"
+              className="w-10 "
               onClick={() => setIsToggled(true)}
             />
           )}
