@@ -58,7 +58,7 @@ const Navbar = () => {
 
   const [isToggled, setIsToggled] = useState(false);
   return (
-    <div className="  sticky  top-0 right-0 bg-white/75 text-black  backdrop:blur-md py-2  z-20">
+    <div className="  sticky  top-0 right-0 shadow-md drop-shadow-md  backdrop-blur-md py-2  z-20">
       <div className="flex items-center justify-between  padding__x">
         <Link href="/">
           <div className=" flex items-center space-x-3 ">
