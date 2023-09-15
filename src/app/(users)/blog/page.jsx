@@ -13,12 +13,12 @@ const BlogPage = async () => {
  ;
   return (
     <main className='padding__x'>
-<Link href="/" className='flex items-center gap-3 my-4'>
+{/* <Link href="/" className='flex items-center gap-3 my-4'>
 <ArrowLeftIcon className='w-8 ' />
 <span>
   Go to Home
 </span>
-</Link>
+</Link> */}
 
     <div className="my-10  grid  grid-cols-1 md:grid-cols-2 gap-4 rounded-md mb-10">
 {
