@@ -15,7 +15,7 @@ const ProductPage = async () => {
   return (
     <main>
       <section className="padding__x bg-orange-500 ">
-        <div className=" block  md:flex items-center md:pt-10 pt-24">
+        {/* <div className=" block  md:flex items-center md:pt-10 pt-24">
           <div className="flex-1 mr-0 md:mr-10">
             <h1 className="text-4xl text-center md:text-start lg:text-5xl xl:text-6xl md:text-4xl font-extrabold text-white">
               The Power of Golden Six
@@ -28,7 +28,7 @@ const ProductPage = async () => {
           <div className="flex-1 mt-10 md:mt-0">
             <Image src={Golden} alt="Golden six" priority />
           </div>
-        </div>
+        </div> */}
       </section>
       <section className="padding__x">
         <div className="pt-10">

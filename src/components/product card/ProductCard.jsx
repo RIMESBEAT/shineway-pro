@@ -13,8 +13,8 @@ const ProductCard = async ({ imgUrl, name, price, description }) => {
           alt={name}
           width={720}
           height={350}
-       
-          priority
+       loading="lazy"
+       quality={60}
           className="
         
            object-cover  rounded-t-md"

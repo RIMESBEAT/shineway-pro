@@ -10,60 +10,104 @@ const ProductDetails = async ({params: {slug}}) => {
   const query = groq`*[_type == 'product' && slug.current == $slug ][0]{
     name,
     "imgUrl":imgUrl.asset->url,
-    description, 
+    functions, 
     slug,
     price,
     advisory,
     dosage,
     prescription,
+    ingredient,
     _id,
     _createdAt
   }`
 
-  const post = await client.fetch(query, {slug})
+  const product = await client.fetch(query, {slug})
 
-  console.log(post);
+  console.log(product);
   return (
-    <main className="padding__x">
+    <main className="padding__x my-8">
+    <h2 className="text-3xl  uppercase font-bold">{product.name}</h2>
+    <div className=" block md:flex items-start gap-8 bg-transparent shadow-lg py-4 px-4 rounded-md ">
+      <div className="flex-1 relative">
+      <Image width={750} height={250} src={product.imgUrl}  alt={product.name} className="rounded-lg mb-10"/>
+      
+      <p className="absolute top-6 right-6 bg-blue-900 p-1 px-2 text-white  rounded-sm font-bold">N{product.price.toLocaleString()}</p>
+      
+      {
+        product.ingredient && (
+          <div className="">
+  <p className="pb-2 text-xl font-medium">Ingredient</p>
+       <p className="capitalize">{product.ingredient.toLowerCase()}</p>
+
+          </div>
+        )
+      }
     
-    <div className=" flex items-center gap-8 ">
-      <div className="flex-1">
-        <Image width={750} height={250} src={post.imgUrl}  alt={post.name}/>
       </div>
-      <div className="flex-1">
-        <h1>Product Description</h1>
-        <div className="">
-          <h2>{post.name}</h2>
+      <div className="flex-1 ">
+      <div className="">
+       
+        <p className="  py-2 text-xl font-medium">Functions </p>
+         <div className="">
+         
+          {
+            product.functions?.map((item)=>(
+              <div className="flex items-start gap-2 my-1" key={item._key} >
+                {/* <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg> */}
+                <h1 className="font-extrabold">.</h1>
+                <p className="capitalize"> {item.function}</p>
+              </div>
+            ))
+          }
+         </div>
+          </div>
+        <div className=" ">
+          
          
 
-          <div className="">
-
-          <p>{post.price}</p>
-          </div>
+          
 <div className="">
+  {
+product.dosage && (
+  <div className="">
 
-          <p>{post.dosage}</p>
+
+<p className="py-2  text-xl font-medium">Dosage</p>
+          <p>{product.dosage}</p>
+  </div>
+)
+  }
+</div>
+<div className="">
+  {
+    product.prescription && (
+      <div className="">
+<p className="py-2  text-xl font-medium">Prescription</p>
+<p>{product.prescription}</p>
+
+      </div>
+    )
+  }
 </div>
 
-<p>{post.prescription}</p>
        <div className="">
         
        {
-            post.advisory && (
+           product.advisory && (
               <div className="">
                 <p>Warning</p>
-                <p className="bg-red-500">{post.advisory}</p>
+                <p className="bg-red-500">{product.advisory}</p>
               </div>
             )
           }
        </div>
+
         </div>
       </div>
     </div>
-    <div className="">
-<p>Functions </p>
-          <p>{post.description}</p>
-          </div>
+   
     
     </main>
   )

@@ -82,7 +82,7 @@ const productData = await getProjects()
             </Link>
           </div>
           <div className="flex-1 mt-10 md:mt-0">
-            <Image src={HappyFamily} alt="Lady " className="" />
+            <Image src={HappyFamily} alt="happy family " loading="lazy" className="" />
           </div>
         </div>
       </section>
@@ -104,7 +104,7 @@ const productData = await getProjects()
             Our Products
           </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {productData?.slice(0, 8).map((item) => (
+            {productData?.slice(0, 4).map((item) => (
               <div className="" key={item._id}>
                 <ProductCard
                   imgUrl={item.imgUrl}
@@ -115,7 +115,7 @@ const productData = await getProjects()
               </div>
             ))}
           </div>
-          <div className=" flex  items-center justify-center pt-20">
+          <div className=" flex  items-center justify-center pt-10">
             <Link
               className="border border-blue-700 dark:border-white flex   py-1 px-4 rounded-md"
               href="/products"
@@ -146,7 +146,7 @@ const productData = await getProjects()
 <div className=" h-fit w-2/3  mx-auto">
 
 
-                <Image src={item.imgUrl} alt={item.title}   className=" h-full  pt-4  mx-auto object-cover " />
+                <Image src={item.imgUrl} alt={item.title}  loading="lazy" quality={50}  className="   pt-4  mx-auto object-cover " />
 </div>
       
       <div className=" items-baseline flex-col ">

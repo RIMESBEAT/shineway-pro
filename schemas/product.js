@@ -31,11 +31,29 @@ export default {
             validation: (Rule) =>Rule.required()
         },
         {
-            name: "description",
-            type: "array",
-            title: "Description",
+            name: "ingredient",
+            type: "string",
+            title: "Ingredient",
             validation: (Rule) =>Rule.required(),
-            of: [{type: 'string'}, ]
+        },
+        {
+            name: "functions",
+            type: "array",
+            title:  "List Functions",
+            validation: (Rule) =>Rule.required(),
+            of: [
+                {
+                  type: 'object',
+                  fields: [
+                    {
+                      name: 'function',
+                      title: 'Function',
+                      type: 'string',
+                    },
+                  ],
+                },
+              ],
+        
         },
         {
             name: "imgUrl",
