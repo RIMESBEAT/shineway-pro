@@ -8,7 +8,7 @@ export const whatMakesUsDiff = [
     imgUrl: require("../../public/100percent.png"),
   },
   {
-    id: 3,
+    id: 2,
     title: "Buy one get one ",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus tempora doloribus asperiores praesentium sapiente obcaecati illum magni consequatur distinctio adipisci.",

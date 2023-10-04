@@ -10,14 +10,15 @@ import { whatMakesUsDiff } from "@/global/whatMakesUsDiff";
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
 // import Slider from "react-slick";
-import TestimonyCard from "@/components/testimonyCard/TestimonyCard";
-import { getProjects } from "../../../sanity/sanity-utils";
+// import TestimonyCard from "@/components/testimonyCard/TestimonyCard";
+
 
 
 
 export default async function  Home() {
 
-const productData = await getProjects()
+  console.log(process.env.CLOUD_NAME);
+// const productData = await getProjects()
   
   // const settings = {
   //   dots: true,
@@ -90,11 +91,7 @@ const productData = await getProjects()
         className="relative"
         
       >
-        {/* <div className=" absolute top-0 left-0 w-full -z-30">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-  <path fill="#eae7e4" fill-opacity="1" d="M0,224L40,213.3C80,203,160,181,240,144C320,107,400,53,480,69.3C560,85,640,171,720,192C800,213,880,171,960,154.7C1040,139,1120,149,1200,176C1280,203,1360,245,1400,266.7L1440,288L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
-</svg>
-        </div> */}
+      
         <div className="padding__x my-14" data-aos="fade-up"
         data-aos-delay="30"
         data-aos-duration="1000"
@@ -103,8 +100,8 @@ const productData = await getProjects()
           <h1 className="font-extrabold   text-2xl py-10 text-center ">
             Our Products
           </h1>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {productData?.slice(0, 4).map((item) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            {/* {productData?.slice(0, 3).map((item) => (
               <div className="" key={item._id}>
               <Link href={`/products/${item.slug.current}`}>
               
@@ -116,7 +113,7 @@ const productData = await getProjects()
                 />
               </Link>
               </div>
-            ))}
+            ))} */}
           </div>
           <div className=" flex  items-center justify-center pt-10">
             <Link
@@ -149,7 +146,7 @@ const productData = await getProjects()
 <div className=" h-fit w-2/3  mx-auto">
 
 
-                <Image src={item.imgUrl} alt={item.title}  loading="lazy" quality={50}  className="   pt-4  mx-auto object-cover " />
+                <Image src={item.imgUrl} alt={item.title}   className="   pt-4  mx-auto object-cover " />
 </div>
       
       <div className=" items-baseline flex-col ">
@@ -168,84 +165,8 @@ const productData = await getProjects()
         </div>
       </section>
 
-      <section
-        className="padding__x "
-        data-aos="fade-up"
-        data-aos-delay="30"
-        data-aos-duration="1000"
-        data-aos-easing="ease-in-sine"
-        data-aos-once="false"
-      >
-        <div className="py-10">
-          <h1 className="font-extrabold py-4  text-2xl text-center mb-10">
-            What You Might Also Like
-          </h1>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {productData?.slice(4,8).map((item) => (
-              <div
-                className=""
-                key={item.id}
-                data-aos="slide-right"
-                data-aos-delay="30"
-              >
-                <Link href={`/products/${item.slug.current}`}>
-                   <ProductCard
-                  imgUrl={item.imgUrl}
-                  name={item.name}
-                  // price={item.price}
-                  description={item.short_description}
-                />
-                </Link>
-             
-              </div>
-            ))}
-          </div>
-          <div className=" flex  items-center justify-center pt-8">
-            <Link
-              className="border flex  border-[#242f9f] dark:border-white py-1 px-4 rounded-md"
-              href="/products"
-            >
-              See more
-              <ArrowUpRightIcon className="w-4" />
-            </Link>
-          </div>
-        </div>
-      </section>
-      <section
-        className="padding__x "
-        data-aos="fade-up"
-        data-aos-delay="30"
-        data-aos-duration="1000"
-        data-aos-easing="ease-in-sine"
-        data-aos-once="false"
-      >
-        <div className="bg-[#eae7e4] rounded-md mt-20 block lg:flex items-center pb-2 lg:pb-0">
-          <div className="flex-1 " data-aos="slide-right" data-aos-delay="50">
-            <Image className=" h-full mx-auto " src={Lady} alt="Lady" />
-          </div>
-          <div
-            className="flex-1 dark:bg-gray-950 bg-white rounded-md mx-2 md:mx-4 py-8 "
-            data-aos="slide-left"
-            data-aos-delay="50"
-          >
-            <h1 className="text-2xl text-center  font-extrabold text-[#242f9f] dark:text-white">
-              About Us
-            </h1>
-            <p className="px-4 md:px-8 text-left  ">
-            SHINEWAY is a Pharmaceutical company which began her operations in the year 1970, Producing over 400 different Pharmaceutical Products.  Shineway is known for producing Traditional Chinese Medicine, with seven factories across China, has two Headquarters, situated in Hong Kong and Shjiazhuang, Hebei. 
-            </p>
-            <div className=" flex  items-center justify-center pt-8">
-              <Link
-                className="border flex  border-[#242f9f] dark:border-white py-1 px-4 rounded-md"
-                href="/about"
-              >
-                See more
-                <ArrowUpRightIcon className="w-4" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      
+      
       {/* <section
         className="padding__x my-20"
         data-aos="fade-up"

@@ -1,6 +1,7 @@
 
 import React from "react";
 import ImgBG from "../../../../public/headoffice.jpg";
+import Lady from "../../../../public/lady.png";
 import Image from "next/image";
 import TeamCard from "@/components/teamCard/TeamCard";
 
@@ -20,17 +21,19 @@ const complanFile = await getComplan()
 
   return (
     <main className=" overflow-x-hidden">
-      <section className=" relative h-auto w-full   flex  items-center justify-center ">
-        <Image src={ImgBG} alt="About" width="100%"  className="h-full   " />
+      <section className=" relative h-auto w-full flex  flex-col md:flex-row  items-center justify-center padding__x">
+      
+      <div className="flex-1 ">
+<h1 className="text-3xl md:text-4xl  font-extrabold lg:text-5xl text-center my-8 md:my-0  mr-0 md:mr-20 sm:mr-10 uppercase">Learn More About Shineway Healthcare</h1>
+      </div>
+      
+       <div className=" h-96   ">
 
-        {/* <div className="absolute padding__x">
-          <p className="text-3xl font-extrabold items-center text-orange-500  text-center ">
-            Know More About Shineway
-          </p>
-          <p className="text-5xl font-extrabold items-center text-[#552713]  text-center ">
-            Shineway Healthcare
-          </p>
-        </div> */}
+
+        <Image src={Lady} alt="shineway lady"  className="h-full w-full object-cover  " />
+       </div>
+
+       
       </section>
 
       <section className="padding__x " 
@@ -48,7 +51,7 @@ const complanFile = await getComplan()
             
               src={ImgBG}
               alt="company"
-              className="h-full grayscale object-cover rounded-md"
+              className="h-full object-cover rounded-md"
             />
           </div>
           <div className="flex-1"   
@@ -89,7 +92,7 @@ const complanFile = await getComplan()
          
         </div>
       </section>
-      <section className="mt-10" data-aos="fade-up"
+      {/* <section className="mt-10" data-aos="fade-up"
         data-aos-delay="30"
         data-aos-duration="1000"
         data-aos-easing="ease-in-sine"
@@ -99,7 +102,7 @@ const complanFile = await getComplan()
             Download Our Complan Here
           </a>
         </div>
-      </section>
+      </section> */}
 
       <section data-aos="fade-up"
         data-aos-delay="30"
