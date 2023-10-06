@@ -1,12 +1,13 @@
 
 import React from "react";
 import ImgBG from "../../../../public/headoffice.jpg";
+import Lady from "../../../../public/lady.png";
+import AboutImage from "../../../../public/about.gif";
 import Image from "next/image";
 import TeamCard from "@/components/teamCard/TeamCard";
 
 import Link from "next/link";
 import Accordion from "@/components/accordion/Accordion";
-import {  getComplan, getTeamData } from "../../../../sanity/sanity-utils";
 import { culture, goals, mission, story, vision } from "@/global/aboutUs";
 // import { P } from "../../../../dist/static/sanity-ea40c1b5";
 
@@ -14,23 +15,22 @@ import { culture, goals, mission, story, vision } from "@/global/aboutUs";
 
 const AboutPage = async () => {
 
-const teamData = await getTeamData()
-const complanFile = await getComplan()
+// const teamData = await getTeamData()
+// const complanFile = await getComplan()
 
 
   return (
     <main className=" overflow-x-hidden">
-      <section className=" relative h-auto w-full   flex  items-center justify-center ">
-        <Image src={ImgBG} alt="About" width="100%"  className="h-full   " />
+      <section className=" ">
 
-        {/* <div className="absolute padding__x">
-          <p className="text-3xl font-extrabold items-center text-orange-500  text-center ">
-            Know More About Shineway
-          </p>
-          <p className="text-5xl font-extrabold items-center text-[#552713]  text-center ">
-            Shineway Healthcare
-          </p>
-        </div> */}
+      
+       <div className="">
+
+
+        <Image src={AboutImage} alt="shineway lady"  className=" " />
+       </div>
+
+       
       </section>
 
       <section className="padding__x " 
@@ -48,7 +48,7 @@ const complanFile = await getComplan()
             
               src={ImgBG}
               alt="company"
-              className="h-full grayscale object-cover rounded-md"
+              className="h-full object-cover rounded-md"
             />
           </div>
           <div className="flex-1"   
@@ -89,7 +89,7 @@ const complanFile = await getComplan()
          
         </div>
       </section>
-      <section className="mt-10" data-aos="fade-up"
+      {/* <section className="mt-10" data-aos="fade-up"
         data-aos-delay="30"
         data-aos-duration="1000"
         data-aos-easing="ease-in-sine"
@@ -99,18 +99,18 @@ const complanFile = await getComplan()
             Download Our Complan Here
           </a>
         </div>
-      </section>
+      </section> */}
 
       <section data-aos="fade-up"
         data-aos-delay="30"
         data-aos-duration="1000"
         data-aos-easing="ease-in-sine"
         data-aos-once="false" className="padding__x relative">
-      {/* <div className=" absolute top-0 left-0 w-full -z-30">
+      <div className=" absolute top-0 left-0 w-full -z-30 ">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-  <path fill="#eae7e4" fill-opacity="1" d="M0,224L40,213.3C80,203,160,181,240,144C320,107,400,53,480,69.3C560,85,640,171,720,192C800,213,880,171,960,154.7C1040,139,1120,149,1200,176C1280,203,1360,245,1400,266.7L1440,288L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
+  <path fill='' className="dark:fill-gray-800  fill-gray-300" fill-opacity="1" d="M0,224L40,213.3C80,203,160,181,240,144C320,107,400,53,480,69.3C560,85,640,171,720,192C800,213,880,171,960,154.7C1040,139,1120,149,1200,176C1280,203,1360,245,1400,266.7L1440,288L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
 </svg>
-        </div> */}
+        </div>
         <div className="grid grid-cols-1  md:grid-cols-2 gap-8 items-baseline justify-start  py-10 ">
           <div className=" ">
             <h1 className="text-center font-bold  text-2xl text-[#242f9f] dark:text-white mb-10 pt-10">
@@ -153,7 +153,7 @@ const complanFile = await getComplan()
           </div>
           <div className=" flex flex-col sm:flex-row gap-8 justify-center ">
            
-
+{/* 
             {
               teamData?.map((item)=>(
                 <div className="scale-up-center md:max-w-[300px] " key={item._id}>
@@ -162,7 +162,7 @@ const complanFile = await getComplan()
                   <TeamCard name={item.name} position={item.position} imgUrl={item.imgUrl} />
                 </div>
               ))
-            }
+            } */}
             </div>
             
             

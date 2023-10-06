@@ -13,11 +13,9 @@ const ProductCard = async ({ imgUrl, name, price, description }) => {
           alt={name}
           width={720}
           height={350}
-       loading="lazy"
+          priority
        quality={60}
-          className="
-        
-           object-cover  rounded-t-md"
+          className="object-cover  rounded-t-md"
         />
         <div className="flex pt-4 px-2 ">
           <p className="uppercase flex-1 text-[#242f9f] dark:text-white font-bold text-sm line-clamp-1">

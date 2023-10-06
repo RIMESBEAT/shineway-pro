@@ -169,6 +169,13 @@ html {
 }
 
 
+.beauty__bg{
+  background-image: url("../../../public/Princess.gif");
+height: 100%;
+width: 100%;
+  background-size:auto;
+  background-repeat: no-repeat;
+}
 
 /* #242f9f --shineway blue */
 /* #fff404 --shineway yellow*/

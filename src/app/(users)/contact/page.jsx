@@ -40,7 +40,7 @@ const Contact = () => {
       };
 
   return (
-    <main className='padding__x '>
+    <main className='padding__x ' id='contact'>
       
      
 

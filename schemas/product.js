@@ -11,6 +11,13 @@ export default {
             title: "Product Name",
             validation: (Rule) =>Rule.required()
         },
+
+        {
+          name: 'category',
+          title: 'Category',
+          type: 'reference',
+          to: [{ type: 'category' }],
+        },
         {
             title: 'Slug',
             name: 'slug',
@@ -34,7 +41,7 @@ export default {
             name: "ingredient",
             type: "string",
             title: "Ingredient",
-            validation: (Rule) =>Rule.required(),
+            // validation: (Rule) =>Rule.required(),
         },
         {
             name: "functions",
@@ -63,6 +70,13 @@ export default {
             options:{
                 hotspot: true
             }
+        },
+
+        {
+            name: "product_story",
+            type: "string",
+            title: "Product Story",
+            validation: (Rule) =>Rule.required()
         },
         {
             name: "price",
@@ -94,3 +108,4 @@ export default {
 
 
 }
+

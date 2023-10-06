@@ -1,75 +1,53 @@
- 
-import React from "react";
-import Golden from "../../../../public/golden.png";
-import Image from "next/image";
-import { products } from "@/global/productData";
+
 import ProductCard from "@/components/product card/ProductCard";
-import { getProjects } from "@/app/api/route";
+import { client } from "../../../../env";
 import Link from "next/link";
+import Image from "next/image";
+import BgImage from "../../../../public/princess.gif"
 
-const ProductPage = async () => {
+const ProductsPage = async () => {
 
-  
-  const productData =  await getProjects()
+  const query = '*[_type == "category"]{title, "products": *[_type == "product" && references(^._id)]{name, short_description, "imgUrl":imgUrl.asset->url, slug,}}';
+  const categories = await client.fetch(query);
 
   return (
-    <main>
-      <section className="padding__x bg-orange-500 ">
-        {/* <div className=" block  md:flex items-center md:pt-10 pt-24">
-          <div className="flex-1 mr-0 md:mr-10">
-            <h1 className="text-4xl text-center md:text-start lg:text-5xl xl:text-6xl md:text-4xl font-extrabold text-white">
-              The Power of Golden Six
-            </h1>
-            <p className=" text-center md:text-start font-bold pt-4">
-              Improve your Kidney&apos;s Life, Boost Your Immune System, Protect you
-              from Cancer and much More...
-            </p>
-          </div>
-          <div className="flex-1 mt-10 md:mt-0">
-            <Image src={Golden} alt="Golden six" priority />
-          </div>
-        </div> */}
-      </section>
-      <section className="padding__x">
-        <div className="pt-10">
-          <div className="text-center">
-            <h1 className="text-2xl   font-extrabold">
-              Our Products
-            </h1>
-            <p className="font-bold">
-              Our products are{" "}
-              <span className=" font-extrabold">100%</span>{" "}
-              organic
-            </p>
-          </div>
-          <div className="grid  mb-20 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-10 ">
-            {productData?.map((item) => (
-              <div className="" key={item._id}>
-                
-                <Link href={`/products/${item.slug.current}`}>
+    <main className="">
+      {/* <h1>Products</h1> */}
+<div className="">
+
+  <Image src={BgImage} alt="Background Image" />
+</div>
+      <section className=" padding__x">
+
+      <div className="py-10 md:py-20 ">
 
 
-                <ProductCard
-                  
-                  imgUrl={item.imgUrl}
-                  name={item.name}
-                  description={item.short_description}
-                  // price={item.price}
-                  
-                />
-                </Link>
-
-              </div>
+              {categories && categories.map((category) => (
+        <div key={category._id}>
+          <h2 className={`${
+  category.title === "beauty" ? "bg-pink-500/30" : ""
+} ${
+  category.title === "energy" ? "bg-red-500/30" : ""
+} ${
+  category.title === "herbal" ? "bg-green-500/30" : ""
+} ${
+  category.title === "bevarage" ? "bg-blue-500/30 " : ""
+} mt-20 mb-4 uppercase  font-extrabold text-2xl p-2` }>{category.title}</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {category.products.map((product) => (
+              <Link href={`/products/${ product.slug.current}`} key={product._id} >
+                <ProductCard name={product.name} imgUrl={product.imgUrl} description={product.short_description} />
+              </Link>
             ))}
           </div>
-    
         </div>
-      </section>
-      
+      ))}
+      </div>
 
-      
+      </section>
     </main>
   );
 };
 
-export default ProductPage;
+
+export default ProductsPage;

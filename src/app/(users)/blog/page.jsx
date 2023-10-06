@@ -12,7 +12,7 @@ const BlogPage = async () => {
 
  ;
   return (
-    <main className='padding__x'>
+    <main className='padding__x' id='blog'>
 {/* <Link href="/" className='flex items-center gap-3 my-4'>
 <ArrowLeftIcon className='w-8 ' />
 <span>

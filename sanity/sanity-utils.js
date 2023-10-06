@@ -7,19 +7,30 @@ import { client } from "../env"
 
 export const getProjects = async ()=>(
     await client.fetch(
-       groq `*[_type == "product"]{
+       groq `*[_type == "product" ]{
             name,
             "imgUrl":imgUrl.asset->url,
             short_description, 
-            slug,
             price,
+            slug,
             _id,
-            _createdAt} `
+            _createdAt
+            } `
     )
 )
 
 
-
+export const getAllProducts = async () => {
+    const query = '*[_type == "product"]';
+    const products = await client.fetch(query);
+    return products;
+  };
+  
+  export const getAllCategories = async () => {
+    const query = '*[_type == "category"]';
+    const categories = await client.fetch(query);
+    return categories;
+  };
 
 
 

@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import Lady from "../../../public/lady.png";
 import HappyFamily from "../../../public/happyffam.png";
-import { products } from "@/global/productData";
 import ProductCard from "@/components/product card/ProductCard";
 import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
 import { whatMakesUsDiff } from "@/global/whatMakesUsDiff";
@@ -18,6 +17,8 @@ import { getProjects } from "../../../sanity/sanity-utils";
 export default async function  Home() {
 
 const productData = await getProjects()
+
+
   
   // const settings = {
   //   dots: true,
@@ -64,15 +65,17 @@ const productData = await getProjects()
 
   return (
     <>
-      <section className=" padding__x  ">
+      <section className=" padding__x  " id="#">
         <div className="block  md:flex items-center md:pt-10 pt-24 ">
           <div className=" flex-1 md:mr-8 mr-0">
-            <h1 className="text__gradient  text-4xl lg:text-5xl xl:text-6xl md:text-4xl font-extrabold">
-              Elevate Your Beauty Journey
+            <div className="font-bold text-2xl text-blue-900 py-2 dark:text-white">
+            Welcome to 
+            </div>
+            <h1 className="text__gradient uppercase  text-2xl lg:text-5xl xl:text-6xl md:text-4xl font-extrabold">
+          Shineway Healthcare
             </h1>
             <p className="my-4 ">
-              Your Path to Healthy Nourished Skin Start Here! Reveal Your Best
-              Skin with Our Transformative Products
+            Let’s take you on an Exquisite journey of a better life, good health, wealth and financial freedom with our exclusive innovation.
             </p>
             <Link
               href="/about"
@@ -90,11 +93,11 @@ const productData = await getProjects()
         className="relative"
         
       >
-        {/* <div className=" absolute top-0 left-0 w-full -z-30">
+        <div className=" absolute top-0 left-0 w-full -z-30">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-  <path fill="#eae7e4" fill-opacity="1" d="M0,224L40,213.3C80,203,160,181,240,144C320,107,400,53,480,69.3C560,85,640,171,720,192C800,213,880,171,960,154.7C1040,139,1120,149,1200,176C1280,203,1360,245,1400,266.7L1440,288L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
+  <path fill="" className="dark:fill-gray-800  fill-gray-300" fill-opacity="1" d="M0,224L40,213.3C80,203,160,181,240,144C320,107,400,53,480,69.3C560,85,640,171,720,192C800,213,880,171,960,154.7C1040,139,1120,149,1200,176C1280,203,1360,245,1400,266.7L1440,288L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
 </svg>
-        </div> */}
+        </div>
         <div className="padding__x my-14" data-aos="fade-up"
         data-aos-delay="30"
         data-aos-duration="1000"
@@ -142,33 +145,28 @@ const productData = await getProjects()
             What makes Us Different
           </h1>
           <div className=" grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1   gap-8 items-center justify-between h-full ">
-            {whatMakesUsDiff?.map((item) => (
-              <div className="bg-transparent scale-up-center shadow-md dark:shadow-md rounded-md dark:shadow-slate-800 dark:border-gray-300 dark:border h-full" key={item.id}>
+          {whatMakesUsDiff?.map((item) => (
+              <Link href={item.url} className="bg-transparent scale-up-center shadow-md dark:shadow-md rounded-md dark:shadow-slate-800 dark:border-gray-300 dark:border h-full" key={item.id}>
              
 
-<div className=" h-fit w-2/3  mx-auto">
-
-
-                <Image src={item.imgUrl} alt={item.title}  loading="lazy" quality={50}  className="   pt-4  mx-auto object-cover " />
-</div>
+        <div className=" h-fit w-2/3  mx-auto">
+                <Image src={item.imgUrl} alt={item.title}   className="   pt-4  mx-auto object-cover " />
+          </div>
       
       <div className=" items-baseline flex-col ">
-
 
                 <p className="capitalize px-2 text-[#242f9f] text-center dark:text-white  font-extrabold text-2xl py-3">
                   {item.title}
                 </p>
-                {/* <p className="px-2 pb-4 font dark:text-gray-300">{item.description}</p> */}
+                {/* <p className="px-2 pb-4 font dark:text-gray-300 line-clamp-2 over">{item.description}</p> */}
       </div>
-
-
-              </div>
+              </Link>
             ))}
           </div>
         </div>
       </section>
 
-      <section
+      {/* <section
         className="padding__x "
         data-aos="fade-up"
         data-aos-delay="30"
@@ -210,8 +208,8 @@ const productData = await getProjects()
             </Link>
           </div>
         </div>
-      </section>
-      <section
+      </section> */}
+      {/* <section
         className="padding__x "
         data-aos="fade-up"
         data-aos-delay="30"
@@ -245,7 +243,7 @@ const productData = await getProjects()
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/* <section
         className="padding__x my-20"
         data-aos="fade-up"

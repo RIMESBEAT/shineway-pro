@@ -5,6 +5,7 @@ import Logo from "../../../public/logo.jpg";
 import Link from "next/link";
 import { XMarkIcon, Bars3BottomRightIcon } from "@heroicons/react/24/solid";
 import ThemeButton from "../themeProvider/ThemeButton";
+import { useRouter } from "next/navigation";
 
 const menu = [
   {
@@ -36,26 +37,7 @@ const menu = [
 
 const Navbar = () => {
 
-  const handleClick = () => {
-    // Focus on the first navigation link when a click occurs
-    const firstNavLink = document.querySelector('.focus-link');
-    if (firstNavLink) {
-      firstNavLink.focus();
-    }
-  };
-
-  // Attach the click event listener when the component mounts
-  useEffect(() => {
-    document.addEventListener('click', handleClick);
-
-    // Clean up the event listener when the component unmounts
-    return () => {
-      document.removeEventListener('click', handleClick);
-    };
-  }, []);
-
-
-
+const router = useRouter()
   const [isToggled, setIsToggled] = useState(false);
   return (
     <div className="  sticky  top-0 right-0 shadow-md drop-shadow-md  backdrop-blur-md py-2  z-20">
@@ -69,18 +51,18 @@ const Navbar = () => {
           </div>
         </Link>
         <div className="  items-center hidden lg:flex text-brown-300   font-bold space-x-4 capitalize ">
-          {menu?.map((items) => (
+          {menu?.map(({id, url, title}) => (
             <div
-              className="  focus-link hover:text-[#242f9f] "
-              key={items.id}
+              className="  focus-linkz hover:text-[#242f9f] "
+              key={id}
              
             >
               <Link
-                href={items.url}
-                className="focus-link "
+                className={`${router === id ? "bg-red-600 text-red-600 mr-10" : ""}`}
+                href={url}
               >
              
-                {items.title}
+                {title}
               </Link>
             </div>
           ))}

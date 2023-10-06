@@ -25,18 +25,18 @@ export default  {
       title: 'Title'
     },
     
-    {
-      group: 'content',
-      title: 'Published Date',
-      name: 'publishedDate',
-      type: 'datetime',
-      options: {
-        dateFormat: 'YYYY-MM-DD',
-        timeFormat: 'HH:mm',
-        timeStep: 15,
-        calendarTodayLabel: 'Today'
-      }
-    },
+    // {
+    //   group: 'content',
+    //   title: 'Published Date',
+    //   name: 'publishedDate',
+    //   type: 'datetime',
+    //   options: {
+    //     dateFormat: 'YYYY-MM-DD',
+    //     timeFormat: 'HH:mm',
+    //     timeStep: 15,
+    //     calendarTodayLabel: 'Today'
+    //   }
+    // },
     {
       group: 'content',
       title: 'Slug',
@@ -51,11 +51,21 @@ export default  {
                              .slice(0, 200)
       }
     },
-    // {
-    //   title: 'Published Date',
-    //   name: 'publishedDate',
-    //   type: 'date'
-    // },
+    {
+      name: 'category',
+      type: 'string',
+      title: 'Category',
+      validation: (Rule) => Rule.required(),
+      options: {
+        list: [
+          { title: 'Promotions', value: 'promotion' },
+          { title: 'Events', value: 'event' },
+          { title: 'News', value: 'news' },
+         
+          // Add more categories as needed
+        ],
+      },
+    },
     {
       group: 'content',
       title: 'Image',
