@@ -3,7 +3,7 @@ import ProductCard from "@/components/product card/ProductCard";
 import { client } from "../../../../env";
 import Link from "next/link";
 import Image from "next/image";
-import BgImage from "../../../../public/princess.gif"
+import BgImage from "../../../../public/Princess.gif"
 
 const ProductsPage = async () => {
 
