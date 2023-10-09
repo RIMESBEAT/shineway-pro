@@ -3,7 +3,7 @@ import { urlFor } from "../../../sanity/sanity-utils"
 
 const RichTextComponent = {
     types: {
-      image: ({value}) => <Image src={urlFor(value).url()} alt={""} width={500} height={300} className='mx-auto my-4 object-cover' />,
+      image: ({value}) => <Image src={urlFor(value).url()} alt={value.title} width={500} height={300} className='mx-auto my-4 object-cover' />,
      
     },
 
@@ -26,12 +26,9 @@ const RichTextComponent = {
         h1: ({children}) => <h1 className="text-2xl font-extrabold text-green-500">{children}</h1>,
         h2: ({children}) => <h2 className="text-2xl text-red-500">{children}</h2>,
         normal: ({children}) => <p className=" ">{children}</p>,
-        blockquote: ({children}) => <blockquote className="  border-l-4 border-l-red-700">
+        blockquote: ({children}) => <blockquote className=" pl-3 border-l-4 border-l-blue-800 ">
+          {children}
           
-          <i className='ml-4 font-medium '>
-{children}
-
-          </i>
           </blockquote>,
     
         // Ex. 2: rendering custom styles
