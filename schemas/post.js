@@ -25,18 +25,6 @@ export default  {
       title: 'Title'
     },
     
-    // {
-    //   group: 'content',
-    //   title: 'Published Date',
-    //   name: 'publishedDate',
-    //   type: 'datetime',
-    //   options: {
-    //     dateFormat: 'YYYY-MM-DD',
-    //     timeFormat: 'HH:mm',
-    //     timeStep: 15,
-    //     calendarTodayLabel: 'Today'
-    //   }
-    // },
     {
       group: 'content',
       title: 'Slug',
@@ -52,19 +40,12 @@ export default  {
       }
     },
     {
-      name: 'category',
-      type: 'string',
-      title: 'Category',
-      validation: (Rule) => Rule.required(),
-      options: {
-        list: [
-          { title: 'Promotions', value: 'promotion' },
-          { title: 'Events', value: 'event' },
-          { title: 'News', value: 'news' },
-         
-          // Add more categories as needed
-        ],
-      },
+      name: 'post_category',
+      title: 'Post Category',
+      type: 'reference',
+      to: [{ type: 'post_category' }],
+      validation: (Rule) =>Rule.required()
+      
     },
     {
       group: 'content',
@@ -95,7 +76,17 @@ export default  {
       type: 'array', 
       of: [
         {
-          type: 'block'
+          type: 'block',  
+          styles: [
+            {title: 'Normal', value: 'normal'},
+            {title: 'H1', value: 'h1'},
+            {title: 'H2', value: 'h2'},
+            {title: 'H3', value: 'h3'},
+            {title: 'H4', value: 'h4'},
+            {title: 'H5', value: 'h5'},
+            {title: 'H6', value: 'h6'},
+            {title: 'Quote', value: 'blockquote'}
+          ]
       },
       {type: 'image'},
       ]

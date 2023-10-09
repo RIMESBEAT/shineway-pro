@@ -10,7 +10,8 @@ const BlogPage = async () => {
 
  const postData = await getPost()
 
- ;
+ console.log(postData);
+
   return (
     <main className='padding__x' id='blog'>
 {/* <Link href="/" className='flex items-center gap-3 my-4'>
@@ -24,7 +25,7 @@ const BlogPage = async () => {
 {
   postData?.map((item)=>(
    <div className=" shadow-lg" key={item._id}>
-<Link href={item.slug} className=" " >
+<Link href={`blog/${item.slug.current}`} className=" " >
       <Article title={item.title} imgUrl={item.imgUrl} description={item.description} _createdAt={item._createdAt}/>
      
     </Link>

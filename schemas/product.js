@@ -73,6 +73,12 @@ export default {
         },
 
         {
+            name: "story_title",
+            type: "string",
+            title: "Story Title",
+            // validation: (Rule) =>Rule.required()
+        },
+        {
             name: "product_story",
             type: "string",
             title: "Product Story",
@@ -82,7 +88,7 @@ export default {
             name: "price",
             type: "number",
             title: "Price",
-            validation: (Rule) =>Rule.required()
+            // validation: (Rule) =>Rule.required()
         },
         {
             name: "dosage",

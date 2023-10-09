@@ -1,5 +1,12 @@
 import {  createClient, groq } from "next-sanity"
 import { client } from "../env"
+import imageUrlBuilder from '@sanity/image-url'
+
+const builder = imageUrlBuilder(client)
+
+export const urlFor =(source)=> {
+  return builder.image(source)
+}
 
 
 
@@ -64,4 +71,5 @@ export const getPost = async ()=>(
       }
       `
     )
+    
 )

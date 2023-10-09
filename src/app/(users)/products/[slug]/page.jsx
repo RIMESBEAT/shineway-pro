@@ -17,6 +17,7 @@ const ProductDetails = async ({params: {slug}}) => {
     dosage,
     prescription,
     ingredient,
+    product_story,
     _id,
     _createdAt
   }`
@@ -26,7 +27,8 @@ const ProductDetails = async ({params: {slug}}) => {
   console.log(product);
   return (
     <main className="padding__x my-8">
-    <h2 className="text-3xl  uppercase font-bold">{product.name}</h2>
+    <h1 className="text-3xl  uppercase font-bold">{product.name}</h1>
+   <p className="my-4">{product.product_story}</p> 
     <div className=" block md:flex items-start gap-8 bg-transparent shadow-lg py-4 px-4 rounded-md ">
       <div className="flex-1 relative">
       <Image width={750} height={250} src={product.imgUrl}  alt={product.name} className="rounded-lg mb-10"/>
