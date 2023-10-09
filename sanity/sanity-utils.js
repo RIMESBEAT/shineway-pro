@@ -67,6 +67,7 @@ export const getPost = async ()=>(
           body,
           "imgUrl":imgUrl.asset->url,
           slug,
+          category,
           _createdAt
       }
       `

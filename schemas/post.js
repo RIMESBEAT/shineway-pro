@@ -39,13 +39,26 @@ export default  {
                              .slice(0, 200)
       }
     },
-    {
-      name: 'post_category',
-      title: 'Post Category',
-      type: 'reference',
-      to: [{ type: 'post_category' }],
-      validation: (Rule) =>Rule.required()
+    // {
+    //   name: 'post_category',
+    //   title: 'Post Category',
+    //   type: 'reference',
+    //   to: [{ type: 'post_category' }],
+    //   validation: (Rule) =>Rule.required()
       
+    // },
+    {
+      title: 'Category',
+      name: 'category',
+      type: 'string',
+      options: {
+        list: [
+          {title: 'Promotion', value: 'promo'},
+          {title: 'News', value: 'news'}, 
+          {title: 'Event', value: 'event'}, 
+        ], // <-- predefined values
+        // layout: 'radio' // <-- defaults to 'dropdown'
+      }
     },
     {
       group: 'content',
