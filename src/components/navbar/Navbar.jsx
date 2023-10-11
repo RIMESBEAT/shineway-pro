@@ -48,7 +48,7 @@ const router = usePathname()
     // Set the active link based on the current route when the component mounts
     const currentRouteId = menu.find((item) => item.url === router)?.id;
     setActiveLink(currentRouteId);
-  }, [router.pathname]);
+  }, [router]);
 
   return (
     <div className="  sticky  top-0 right-0 shadow-md drop-shadow-md  backdrop-blur-md py-2  z-20">
@@ -64,13 +64,13 @@ const router = usePathname()
         <div className="  items-center hidden lg:flex text-brown-300   font-bold space-x-4 capitalize ">
           {menu?.map(({id, url, title}) => (
             <div
-            className={activeLink === id ? 'active border-b-2 border-blue-800 text-blue-800 dark:text-gray-300 dark:border-white ' : 'text-black dark:text-gray-300'}
-            onClick={() => handleLinkClick(id)}
+
               key={id}
              
             >
               <Link
-               
+                className={activeLink === id ? 'active border-b-2 border-blue-800 text-blue-800 dark:text-white dark:border-white ' : 'text-black dark:text-gray-300'}
+                onClick={() => handleLinkClick(id)}
                 href={url}
               >
              

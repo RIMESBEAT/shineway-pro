@@ -47,7 +47,7 @@ const Footer = () => {
 
                 {
             socials.map((item)=>(
-              <Link href={item.link} className=" flex items-center my-3 capitalize gap-2" key={item.id}>
+              <Link href={item.link} className=" flex items-center my-3 capitalize gap-2" key={item.id} target="_blank" rel="noopener noreferrer">
                 <p className={`${item.name === "facebook"? "fill-blue-800" : "" }${item.name === "instagram"? "fill-red-500" : "" } ${item.name === "twitter"? "fill-blue-800" : "" }`}>{item.icon}</p>
                 <p>{item.name}</p>
               </Link>

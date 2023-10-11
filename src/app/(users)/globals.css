@@ -168,28 +168,30 @@ html {
   }
 }
 
-.links{
-  margin:0 .6rem;
-  color: white;
+.rotate-center {
+	-webkit-animation: rotate-center 1s ease-in-out infinite both;
+	        animation: rotate-center 1s ease-in-out infinite both;
 }
-.links a{
-  color: white;
-  transition: var(--text-transition);
-  position:relative
+@-webkit-keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
-.links a:hover,
-.links a.active{
-  color: blue;
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
-.links a:hover::after,
-.links a.active::after{
-  content:'';
-  position: absolute;
-  width: 70%;
-  height: 5px;
-  background: blue;
-  bottom: -5px;
-  left: 0;
-}
+
 /* #242f9f --shineway blue */
 /* #fff404 --shineway yellow*/

@@ -15,8 +15,10 @@ const BlogPage = async () => {
  const postData = await getPost()
   return (
     <main className='' id='blog'>
+<div className="aspect-w-16 aspect-h-9">
 
 <Image src={BlogBg} alt='blog banner'/>
+</div>
 
 <div className="flex padding__x  items-center">
     <div className="my-10 flex-[5]  grid grid-cols-1  sm:grid-cols-2 gap-4 rounded-md mb-10">
