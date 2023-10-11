@@ -47,11 +47,11 @@ const Contact = () => {
 
     {/* <p>Fill up the form our team will get back to you within 24 hours</p> */}
 
-    <div className="flex items-center justify-center gap-8 mt-10">
+    <div className="flex items-center justify-center gap-4 md:gap-8  mt-10">
 {
   socials?.map((item)=>(
     <div className="" key={item.id}>
-      <a href={item.link} target="_blank" rel="noopener noreferrer" className='flex items-center gap-2 capitalize'>
+      <a href={item.link} target="_blank" rel="noopener noreferrer" className='flex items-center gap-1 capitalize'>
         <p className={`${item.name === "facebook"? "fill-blue-800" : "" }${item.name === "instagram"? "fill-red-500" : "" } ${item.name === "twitter"? "fill-blue-800" : "" }`}>{item.icon}</p>
       
         <div className="">

@@ -18,16 +18,23 @@ const ProductDetails = async ({params: {slug}}) => {
     prescription,
     ingredient,
     product_story,
+    story_title,
     _id,
     _createdAt
   }`
 
   const product = await client.fetch(query, {slug})
 
-  console.log(product);
+
   return (
     <main className="padding__x my-8">
     <h1 className="text-3xl  uppercase font-bold">{product.name}</h1>
+    {
+      product.story_title && (
+       <p className="my-4 font-bold">{product.story_title}</p> 
+      )
+    }
+ 
    <p className="my-4">{product.product_story}</p> 
     <div className=" block md:flex items-start gap-8 bg-transparent shadow-lg py-4 px-4 rounded-md ">
       <div className="flex-1 relative">
