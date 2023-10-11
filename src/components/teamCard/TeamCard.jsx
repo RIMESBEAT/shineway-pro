@@ -12,7 +12,13 @@ const TeamCard = ({name, imgUrl, position}) => {
         </div>
         <div className=" px-4 py-2 ">
             <h1 className='font-bold py-1 text-[#242f9f] dark:text-white uppercase'>{name}</h1>
-            <p className='font-bold text-sm dark:text-gray-400'>{position}</p>
+
+            <div className="flex items-center justify-between">
+
+            <p className='font-bold text-sm dark:text-gray-400 line-clamp-1'>{position}</p>
+            <p className='text-right font-bold text-lg'>	&#43;</p>
+            </div>
+      
         </div>
       </div>
     </div>

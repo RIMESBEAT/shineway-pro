@@ -27,9 +27,9 @@ const BlogContent = async ({params: {slug}}) => {
   return (
     <div className='padding__x '>
     <div className="my-10">
-      <h1 className='font-bold text-4xl my-4 '>
+      {/* <h1 className='font-bold text-4xl my-4 '>
         {post.title}
-        </h1>
+        </h1> */}
     <PortableText value={post.body} components={RichTextComponent} />
       </div> 
     </div>

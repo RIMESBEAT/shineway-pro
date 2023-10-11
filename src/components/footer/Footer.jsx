@@ -3,6 +3,7 @@ import React from 'react'
 import Logo from "../../../public/logo.jpg"
 import Image from 'next/image'
 import Link from 'next/link'
+import { socials } from '@/global/socials'
 
 
 let date = new Date().getFullYear()
@@ -42,9 +43,18 @@ const Footer = () => {
           <h1 className='text-lg font-bold '>
             Connect With Us
           </h1>
-          <p className='my-2'><Link href=''> facebook</Link></p>
-          <p className='my-2'><Link href=''> WeChat</Link></p>
-          <p className='my-2'><Link href=''> WhatsApp</Link></p>
+          <div className="">
+
+                {
+            socials.map((item)=>(
+              <Link href={item.link} className=" flex items-center my-3 capitalize gap-2" key={item.id}>
+                <p className={`${item.name === "facebook"? "fill-blue-800" : "" }${item.name === "instagram"? "fill-red-500" : "" } ${item.name === "twitter"? "fill-blue-800" : "" }`}>{item.icon}</p>
+                <p>{item.name}</p>
+              </Link>
+            ))
+          }
+          </div>
+      
         </div>
         </div>
       </div>
