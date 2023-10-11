@@ -58,7 +58,7 @@ const router = useRouter()
         <div className="  items-center hidden lg:flex text-brown-300   font-bold space-x-4 capitalize ">
           {menu?.map(({id, url, title}) => (
             <div
-            className={activeLink === id ? 'active border-b-4 border-blue-800 dark:border-white ' : ''}
+            className={activeLink === id ? 'active border-b-2 border-blue-800 dark:border-white ' : ''}
             onClick={() => handleLinkClick(id)}
               key={id}
              
