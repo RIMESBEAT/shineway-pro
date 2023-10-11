@@ -45,11 +45,6 @@ export const faqsCompany =[
         answer: "Only once"
     },
     {
-        id: 4,
-        question: " After upgrading can I still collect the additional free products?",
-        answer: "Only once"
-    },
-    {
         id: 5,
         question: " After upgrading can I still collect the additional free products?",
         answer: "No, you can't."

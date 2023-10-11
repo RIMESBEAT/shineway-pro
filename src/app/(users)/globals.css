@@ -168,10 +168,28 @@ html {
   }
 }
 
-.text.active{
-  color: red;
+.links{
+  margin:0 .6rem;
+  color: white;
 }
-
-
+.links a{
+  color: white;
+  transition: var(--text-transition);
+  position:relative
+}
+.links a:hover,
+.links a.active{
+  color: blue;
+}
+.links a:hover::after,
+.links a.active::after{
+  content:'';
+  position: absolute;
+  width: 70%;
+  height: 5px;
+  background: blue;
+  bottom: -5px;
+  left: 0;
+}
 /* #242f9f --shineway blue */
 /* #fff404 --shineway yellow*/

@@ -20,7 +20,7 @@ export const teamData = [
     {
         id: 3,
         name: "Ellis Li",
-        position: " Chief Finance Officer",
+        position: " Chief Finance Manager",
         qualification: "Ellis Li, the Chief Finance Officer holds a Bachelor's degree in Finance and Economics, from Shanxi University of Finance and Economics. She has about 10years working experience and has worked in the Manufacturing and Retail industries, where she functioned as a Management Accountant, Group Head of Finance and Accounts, and Chief Finance Officer respectively.",
         imgUrl: require("../../public/ellis.jpg")
 

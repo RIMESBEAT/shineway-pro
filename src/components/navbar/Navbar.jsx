@@ -39,6 +39,11 @@ const Navbar = () => {
 
 const router = useRouter()
   const [isToggled, setIsToggled] = useState(false);
+  const [activeLink, setActiveLink] = useState(null);
+  const handleLinkClick = (id) => {
+    setActiveLink(id);
+  };
+
   return (
     <div className="  sticky  top-0 right-0 shadow-md drop-shadow-md  backdrop-blur-md py-2  z-20">
       <div className="flex items-center justify-between  padding__x">
@@ -53,12 +58,13 @@ const router = useRouter()
         <div className="  items-center hidden lg:flex text-brown-300   font-bold space-x-4 capitalize ">
           {menu?.map(({id, url, title}) => (
             <div
-              className="   hover:text-[#242f9f] "
+            className={activeLink === id ? 'active border-b-4 border-blue-800 dark:border-white ' : ''}
+            onClick={() => handleLinkClick(id)}
               key={id}
              
             >
               <Link
-                className={`${router === id?  "text focus:bg-red-600 active:text-red-600 mr-10" : ""}`}
+               
                 href={url}
               >
              
