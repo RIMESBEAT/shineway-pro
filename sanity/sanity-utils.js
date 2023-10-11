@@ -70,7 +70,8 @@ export const getPost = async ()=>(
           category,
           _createdAt
       }
-      `
+      `,
+      { cachePolicy: 'no-cache' }
     )
     
 )
