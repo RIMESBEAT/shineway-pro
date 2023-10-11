@@ -28,7 +28,7 @@ const Aside = ({category, title, imgUrl, description, createdAt, postData, slug}
     ))
 }
 
-<div className="">
+{/* <div className="">
 <h2>Categories</h2>
 
 <div className="flex gap-2">
@@ -42,7 +42,7 @@ const Aside = ({category, title, imgUrl, description, createdAt, postData, slug}
 }
 </div>
 
-</div>
+</div> */}
 </div>
     </main>
   )

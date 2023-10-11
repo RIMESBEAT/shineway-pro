@@ -8,6 +8,7 @@ import { culture, goals, mission, story, vision } from "@/global/aboutUs";
 import { teamData } from "@/global/teamData";
 import { useState } from "react";
 import TeamModal from "@/components/teamModal/TeamModal";
+import Accordion from "@/components/accordion/Accordion";
 
 
 
@@ -180,7 +181,47 @@ const closeModal = () => {
         </div>
       </section>
 
-     
+      <section className="padding__x" data-aos="fade-up"
+        data-aos-delay="30"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-sine"
+        data-aos-once="false">
+        <div className=" py-10 ">
+          <h1 className="text-2xl font-bold ">Our Offices</h1>
+<div className="w-full  md:w-1/2">
+      <div className="">
+      <Accordion
+        title="Ikeja, Lagos"
+        content={<div className="bold"> 
+        <p>No.5 Owodumi Street,Off Toyin Street
+          Opposite Motayo Hospital Ikeja Lagos</p>
+          <h4 className=" pt-4 ">Customer Care</h4>
+          <p className="py-3"> Airtel: <span className="font-bold">09028712535 </span></p>
+       <p className=""> Mtn: <span className="font-bold">07034283680 </span></p>
+          </div>
+          
+        }
+      />
+      </div>
+
+     <div className="my-4 ">
+     <Accordion
+        title="Uyo, Akwa Ibom"
+        content={<div className="bold"> 
+       <p className="text-bold capitalize"> 
+
+        No.41 Idoro Road, opposite Opulent Dynamic Filling Station Uyo
+       </p>
+       <h4 className=" pt-4 ">Customer Care</h4>
+       <p className="py-3"> Airtel: <span className="font-bold">09028712535 </span></p>
+       <p className=""> Mtn: <span className="font-bold">07034283680 </span></p>
+        </div>}
+      />
+     </div>
+      {/* Add more Accordion components as needed */}
+</div>
+        </div>
+      </section>
 
       {/* <section data-aos="fade-up"
         data-aos-delay="30"

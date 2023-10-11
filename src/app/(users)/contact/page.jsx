@@ -41,28 +41,28 @@ const Contact = () => {
 
   return (
     <main className='padding__x ' id='contact'>
-      
-     
-
-
-     <div className="block md:flex  items-center mt-10 pt-10 gap-8">
+     <div className="block md:flex items-center pt-10 gap-8">
      <div className="text-center flex-1 ">
     <h1 className=' text-2xl md:text-4xl'>Contact Us</h1>
 
-    <p>Fill up the form our team will get back to you within 24 hours</p>
+    {/* <p>Fill up the form our team will get back to you within 24 hours</p> */}
 
-    {/* <div className="">
+    <div className="flex items-center justify-center gap-8 mt-10">
 {
   socials?.map((item)=>(
     <div className="" key={item.id}>
-      <a href={item.link}>
-        <Image src={item.icon} alt={item.name} />
-        svgh  <s></s>
+      <a href={item.link} target="_blank" rel="noopener noreferrer" className='flex items-center gap-2 capitalize'>
+        <p className={`${item.name === "facebook"? "fill-blue-800" : "" }${item.name === "instagram"? "fill-red-500" : "" } ${item.name === "twitter"? "fill-blue-800" : "" }`}>{item.icon}</p>
+      
+        <div className="">
+
+        <p>{item.name}</p>
+        </div>
       </a>
     </div>
   ))
 }
-    </div> */}
+    </div>
 </div>
 
 
@@ -145,47 +145,7 @@ const Contact = () => {
 
      </div>
 
-     <section className="" data-aos="fade-up"
-        data-aos-delay="30"
-        data-aos-duration="1000"
-        data-aos-easing="ease-in-sine"
-        data-aos-once="false">
-        <div className="mt-10 py-20 ">
-          <h1 className="text-2xl font-bold ">Our Offices</h1>
-<div className="w-full  md:w-1/2">
-      <div className="">
-      <Accordion
-        title="Ikeja, Lagos"
-        content={<div className="bold"> 
-        <p>No.5 Owodumi Street,Off Toyin Street
-          Opposite Motayo Hospital Ikeja Lagos</p>
-          <h4 className=" pt-4 ">Customer Care</h4>
-          <p className="py-3"> Airtel: <span className="font-bold">09028712535 </span></p>
-       <p className=""> Mtn: <span className="font-bold">07034283680 </span></p>
-          </div>
-          
-        }
-      />
-      </div>
-
-     <div className="my-4 ">
-     <Accordion
-        title="Uyo, Akwa Ibom"
-        content={<div className="bold"> 
-       <p className="text-bold capitalize"> 
-
-        No.41 Idoro Road, opposite Opulent Dynamic Filling Station Uyo
-       </p>
-       <h4 className=" pt-4 ">Customer Care</h4>
-       <p className="py-3"> Airtel: <span className="font-bold">09028712535 </span></p>
-       <p className=""> Mtn: <span className="font-bold">07034283680 </span></p>
-        </div>}
-      />
-     </div>
-      {/* Add more Accordion components as needed */}
-</div>
-        </div>
-      </section>
+     
 
 <div className="my-10 ">
 <h1 className='py-4 font-extrabold text-4xl'>FAQs</h1>
@@ -230,10 +190,6 @@ faqsProducts?.map((item)=>(
 
 </div>
 </div>
-     
-        <div className="">
-            socials
-        </div>
 
     </main>
   )
