@@ -32,7 +32,7 @@ const ProductsPage = async () => {
             category.title === "herbal" ? "bg-green-500/30" : ""
           } ${
             category.title === "bevarage" ? "bg-blue-500/30 " : ""
-          }  mb-6 uppercase  font-extrabold text-2xl p-2` }>{category.title}</h2>
+          } mt-10 mb-6 uppercase  font-extrabold text-2xl p-2` }>{category.title}</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {category.products.map((product) => (
               <Link href={`/products/${ product.slug.current}`} key={product._id} >

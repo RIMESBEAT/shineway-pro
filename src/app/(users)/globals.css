@@ -168,7 +168,9 @@ html {
   }
 }
 
-
+.text.active{
+  color: red;
+}
 
 
 /* #242f9f --shineway blue */

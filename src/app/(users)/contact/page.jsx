@@ -51,7 +51,7 @@ const Contact = () => {
 
     <p>Fill up the form our team will get back to you within 24 hours</p>
 
-    <div className="">
+    {/* <div className="">
 {
   socials?.map((item)=>(
     <div className="" key={item.id}>
@@ -62,11 +62,11 @@ const Contact = () => {
     </div>
   ))
 }
-    </div>
+    </div> */}
 </div>
 
 
-<form onSubmit={handleSubmit} className='flex-1 backdrop-blur-md bg-opacity-10 bg-gray-900 px-4 py-8 rounded-md dark:bg-gray-400'>
+{/* <form onSubmit={handleSubmit} className='flex-1 backdrop-blur-md bg-opacity-10 bg-gray-900 px-4 py-8 rounded-md dark:bg-gray-400'>
       <div className="flex gap-4">
 
          <div className=''>
@@ -140,14 +140,54 @@ const Contact = () => {
 
         <button className='bg-white px-8 py-2 w-full rounded-md font-extrabold dark:bg-blue-700' type="submit">Submit</button>
         </div>
-      </form>
+      </form> */}
 
 
      </div>
 
+     <section className="" data-aos="fade-up"
+        data-aos-delay="30"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-sine"
+        data-aos-once="false">
+        <div className="mt-10 py-20 ">
+          <h1 className="text-2xl font-bold ">Our Offices</h1>
+<div className="w-full  md:w-1/2">
+      <div className="">
+      <Accordion
+        title="Ikeja, Lagos"
+        content={<div className="bold"> 
+        <p>No.5 Owodumi Street,Off Toyin Street
+          Opposite Motayo Hospital Ikeja Lagos</p>
+          <h4 className=" pt-4 ">Customer Care</h4>
+          <p className="py-3"> Airtel: <span className="font-bold">09028712535 </span></p>
+       <p className=""> Mtn: <span className="font-bold">07034283680 </span></p>
+          </div>
+          
+        }
+      />
+      </div>
 
+     <div className="my-4 ">
+     <Accordion
+        title="Uyo, Akwa Ibom"
+        content={<div className="bold"> 
+       <p className="text-bold capitalize"> 
 
-<div className="my-10 pt-20">
+        No.41 Idoro Road, opposite Opulent Dynamic Filling Station Uyo
+       </p>
+       <h4 className=" pt-4 ">Customer Care</h4>
+       <p className="py-3"> Airtel: <span className="font-bold">09028712535 </span></p>
+       <p className=""> Mtn: <span className="font-bold">07034283680 </span></p>
+        </div>}
+      />
+     </div>
+      {/* Add more Accordion components as needed */}
+</div>
+        </div>
+      </section>
+
+<div className="my-10 ">
 <h1 className='py-4 font-extrabold text-4xl'>FAQs</h1>
 
 <div className="block md:flex items-start  gap-8 ">

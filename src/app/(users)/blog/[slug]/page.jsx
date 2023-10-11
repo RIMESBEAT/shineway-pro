@@ -25,8 +25,13 @@ const BlogContent = async ({params: {slug}}) => {
       
 
   return (
-    <div className='padding__x my-8'>BlogContent {post.title}
+    <div className='padding__x '>
+    <div className="">
+      <h1 className='font-bold text-4xl'>
+        {post.title}
+        </h1>
     <PortableText value={post.body} components={RichTextComponent} />
+      </div> 
     </div>
   )
 }

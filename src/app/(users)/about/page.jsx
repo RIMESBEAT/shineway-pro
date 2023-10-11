@@ -1,22 +1,28 @@
-
+'use client'
 import React from "react";
 import ImgBG from "../../../../public/headoffice.jpg";
-import Lady from "../../../../public/lady.png";
 import AboutImage from "../../../../public/about.gif";
 import Image from "next/image";
 import TeamCard from "@/components/teamCard/TeamCard";
-
-import Link from "next/link";
-import Accordion from "@/components/accordion/Accordion";
 import { culture, goals, mission, story, vision } from "@/global/aboutUs";
-// import { P } from "../../../../dist/static/sanity-ea40c1b5";
+import { teamData } from "@/global/teamData";
+import { useState } from "react";
+import TeamModal from "@/components/teamModal/TeamModal";
 
 
 
-const AboutPage = async () => {
 
-// const teamData = await getTeamData()
-// const complanFile = await getComplan()
+const AboutPage =  () => {
+
+const [toggle, setToggle]= useState(null)
+
+const openModal = (item) => {
+  setToggle(item);
+};
+
+const closeModal = () => {
+  setToggle(null)
+};
 
 
   return (
@@ -42,7 +48,7 @@ const AboutPage = async () => {
       
       >
         
-        <div className="block min-h-max mt-10 py-5 lg:flex items-center">
+        <div className="block min-h-max  py-5 lg:flex items-center">
           <div className="flex-1  flex items-center justify-center lg:mr-8 ">
             <Image
             
@@ -147,72 +153,36 @@ const AboutPage = async () => {
         data-aos-easing="ease-in-sine"
         data-aos-once="false">
 
-        <div className="">
+        <div className="mb-20">
           <div className=" text-center my-10 text-2xl font-extrabold">
             <h1 className="text-2xl md:text-4xl font-bold text-[#242f9f] dark:text-white mb-10 ">The Amazing Team of Us</h1>
           </div>
-          <div className=" flex flex-col sm:flex-row gap-8 justify-center ">
+          <div className=" grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3 gap-8 justify-center " >
            
-{/* 
+
             {
               teamData?.map((item)=>(
-                <div className="scale-up-center md:max-w-[300px] " key={item._id}>
+                <div className="scale-up-center  " key={item._id} onClick={()=>openModal(item)} >
 
 
                   <TeamCard name={item.name} position={item.position} imgUrl={item.imgUrl} />
+
+    
                 </div>
               ))
-            } */}
+            }
             </div>
             
-            
+            {
+              toggle && <TeamModal item={toggle} closeModal={closeModal} />
+            }
          
         </div>
       </section>
 
-      <section className="padding__x" data-aos="fade-up"
-        data-aos-delay="30"
-        data-aos-duration="1000"
-        data-aos-easing="ease-in-sine"
-        data-aos-once="false">
-        <div className="mt-10 py-20 ">
-          <h1 className="text-2xl font-bold ">Our Offices</h1>
-<div className="w-full  md:w-1/2">
-      <div className="">
-      <Accordion
-        title="Ikeja, Lagos"
-        content={<div className="bold"> 
-        <p>No.5 Owodumi Street,Off Toyin Street
-          Opposite Motayo Hospital Ikeja Lagos</p>
-          <h4 className=" pt-4 ">Customer Care</h4>
-          <p className="py-3"> Airtel: <span className="font-bold">09028712535 </span></p>
-       <p className=""> Mtn: <span className="font-bold">07034283680 </span></p>
-          </div>
-          
-        }
-      />
-      </div>
+     
 
-     <div className="my-4 ">
-     <Accordion
-        title="Uyo, Akwa Ibom"
-        content={<div className="bold"> 
-       <p className="text-bold capitalize"> 
-
-        No.41 Idoro Road, opposite Opulent Dynamic Filling Station Uyo
-       </p>
-       <h4 className=" pt-4 ">Customer Care</h4>
-       <p className="py-3"> Airtel: <span className="font-bold">09028712535 </span></p>
-       <p className=""> Mtn: <span className="font-bold">07034283680 </span></p>
-        </div>}
-      />
-     </div>
-      {/* Add more Accordion components as needed */}
-</div>
-        </div>
-      </section>
-
-      <section data-aos="fade-up"
+      {/* <section data-aos="fade-up"
         data-aos-delay="30"
         data-aos-duration="1000"
         data-aos-easing="ease-in-sine"
@@ -225,7 +195,7 @@ const AboutPage = async () => {
             <button className="bg-blue-700 px-1 my-1 rounded-md">Subscribe</button>
           </div>
         </div>
-      </section>
+      </section> */}
     </main>
   );
 };

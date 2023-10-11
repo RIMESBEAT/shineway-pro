@@ -5,7 +5,7 @@ import Logo from "../../../public/logo.jpg";
 import Link from "next/link";
 import { XMarkIcon, Bars3BottomRightIcon } from "@heroicons/react/24/solid";
 import ThemeButton from "../themeProvider/ThemeButton";
-import { useRouter } from "next/navigation";
+import {usePathname, useRouter } from "next/navigation";
 
 const menu = [
   {
@@ -53,12 +53,12 @@ const router = useRouter()
         <div className="  items-center hidden lg:flex text-brown-300   font-bold space-x-4 capitalize ">
           {menu?.map(({id, url, title}) => (
             <div
-              className="  focus-linkz hover:text-[#242f9f] "
+              className="   hover:text-[#242f9f] "
               key={id}
              
             >
               <Link
-                className={`${router === id ? "bg-red-600 text-red-600 mr-10" : ""}`}
+                className={`${router === id?  "text focus:bg-red-600 active:text-red-600 mr-10" : ""}`}
                 href={url}
               >
              
