@@ -65,7 +65,7 @@ const productData = await getProjects()
 
   return (
     <>
-      <section className=" padding__x  " id="#">
+      <section className=" padding__x  " >
         <div className="block  md:flex items-center md:pt-10 pt-24 ">
           <div className=" flex-1 md:mr-8 mr-0">
             <div className="font-bold text-2xl text-blue-900 py-2 dark:text-white">
@@ -85,7 +85,7 @@ const productData = await getProjects()
             </Link>
           </div>
           <div className="flex-1 mt-10 md:mt-0">
-            <Image src={HappyFamily} alt="happy family " loading="lazy" className="" />
+            <Image src={HappyFamily} alt="happy family " priority className="" />
           </div>
         </div>
       </section>
@@ -95,7 +95,7 @@ const productData = await getProjects()
       >
         <div className=" absolute top-0 left-0 w-full -z-30">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-  <path fill="" className="dark:fill-gray-800  fill-gray-300" fill-opacity="1" d="M0,224L40,213.3C80,203,160,181,240,144C320,107,400,53,480,69.3C560,85,640,171,720,192C800,213,880,171,960,154.7C1040,139,1120,149,1200,176C1280,203,1360,245,1400,266.7L1440,288L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
+  <path fill="" className="dark:fill-gray-800  fill-gray-300" fillOpacity="1" d="M0,224L40,213.3C80,203,160,181,240,144C320,107,400,53,480,69.3C560,85,640,171,720,192C800,213,880,171,960,154.7C1040,139,1120,149,1200,176C1280,203,1360,245,1400,266.7L1440,288L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
 </svg>
         </div>
         <div className="padding__x my-14" data-aos="fade-up"
@@ -144,13 +144,13 @@ const productData = await getProjects()
           <h1 className="text-2xl font-extrabold  text-center py-20">
             What makes Us Different
           </h1>
-          <div className=" grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1   gap-8 items-center justify-between h-full ">
+          <div className=" grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1   gap-8 items-center  ">
           {whatMakesUsDiff?.map((item) => (
               <Link href={item.url} className="bg-transparent scale-up-center shadow-md dark:shadow-md rounded-md dark:shadow-slate-800 dark:border-gray-300 dark:border h-full" key={item.id}>
              
 
         <div className=" h-fit w-2/3  mx-auto">
-                <Image src={item.imgUrl} alt={item.title}   className="   pt-4  mx-auto object-cover " />
+                <Image src={item.imgUrl} alt={item.title}   className="   pt-4  mx-auto object-cover h-full " />
           </div>
       
       <div className=" items-baseline flex-col ">

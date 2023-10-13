@@ -13,7 +13,7 @@ export const whatMakesUsDiff = [
     title: "Innovative Complan ",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus tempora doloribus asperiores praesentium sapiente obcaecati illum magni consequatur distinctio adipisci.",
-    imgUrl: require("../../public/specialoffer.png"),
+    imgUrl: require("../../public/specialoffer.svg"),
     url: "/features/complan",
   },
   {

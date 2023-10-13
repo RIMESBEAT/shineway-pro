@@ -102,14 +102,14 @@ const router = usePathname()
                 >
                   <Link
                     href={item.url}
-                    className="focus:border-b-4 "
+                    className={activeLink === item.id ? 'active border-b-2 border-white text-white dark:text-white dark:border-white ' : 'text-gray-300'}
                     onClick={() => setIsToggled(false)}
                   >
                     {item.title}
                   </Link>
                 </div>
               ))}
-              <div onC className="bg-gray-300 dark:bg-gray-900 py-1 rounded-md flex justify-center mx-auto">
+              <div  className="bg-gray-300 dark:bg-gray-900 py-1 rounded-md flex justify-center mx-auto">
 
                <ThemeButton  />
               </div>

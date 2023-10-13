@@ -9,6 +9,7 @@ import { teamData } from "@/global/teamData";
 import { useState } from "react";
 import TeamModal from "@/components/teamModal/TeamModal";
 import Accordion from "@/components/accordion/Accordion";
+import { motion } from "framer-motion";
 
 
 
@@ -40,7 +41,9 @@ const closeModal = () => {
        
       </section>
 
-      <section className="padding__x " 
+      <motion.div
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }} className="padding__x " 
       data-aos="fade-up"
       data-aos-delay="30"
       data-aos-duration="1000"
@@ -68,8 +71,10 @@ const closeModal = () => {
             </p>
           </div>
         </div>
-      </section>
-      <section className="padding__x" data-aos="fade-up"
+      </motion.div>
+      <motion.div
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }} className="padding__x" data-aos="fade-up"
         data-aos-delay="30"
         data-aos-duration="1000"
         data-aos-easing="ease-in-sine"
@@ -95,18 +100,8 @@ const closeModal = () => {
           </div>
          
         </div>
-      </section>
-      {/* <section className="mt-10" data-aos="fade-up"
-        data-aos-delay="30"
-        data-aos-duration="1000"
-        data-aos-easing="ease-in-sine"
-        data-aos-once="false">
-        <div className=" justify-center bg-[#eae7e4] py-6 flex">
-          <a target="_blank" href={`${complanFile[0].pdf_file}?dl=`} className="bg-[#242f9f] rounded-md py-2 px-3 text-lg font-bold text-white text-center">
-            Download Our Complan Here
-          </a>
-        </div>
-      </section> */}
+      </motion.div>
+   
 
       <section data-aos="fade-up"
         data-aos-delay="30"
@@ -115,7 +110,7 @@ const closeModal = () => {
         data-aos-once="false" className="padding__x relative">
       <div className=" absolute top-0 left-0 w-full -z-30 ">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-  <path fill='' className="dark:fill-gray-800  fill-gray-300" fill-opacity="1" d="M0,224L40,213.3C80,203,160,181,240,144C320,107,400,53,480,69.3C560,85,640,171,720,192C800,213,880,171,960,154.7C1040,139,1120,149,1200,176C1280,203,1360,245,1400,266.7L1440,288L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
+  <path fill='' className="dark:fill-gray-800  fill-gray-300" fillOpacity="1" d="M0,224L40,213.3C80,203,160,181,240,144C320,107,400,53,480,69.3C560,85,640,171,720,192C800,213,880,171,960,154.7C1040,139,1120,149,1200,176C1280,203,1360,245,1400,266.7L1440,288L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
 </svg>
         </div>
         <div className="grid grid-cols-1  md:grid-cols-2 gap-8 items-baseline justify-start  py-10 ">
@@ -163,7 +158,7 @@ const closeModal = () => {
 
             {
               teamData?.map((item)=>(
-                <div className="scale-up-center  " key={item._id} onClick={()=>openModal(item)} >
+                <div className="scale-up-center  " key={item.id} onClick={()=>openModal(item)} >
 
 
                   <TeamCard name={item.name} position={item.position} imgUrl={item.imgUrl} />
