@@ -33,12 +33,19 @@ export const getAllProducts = async () => {
     return products;
   };
   
-  // export const getAllCategories = async () => {
-  //   const query = '*[_type == "category"]';
-  //   const categories = await client.fetch(query);
+  export const getAllCategories = async () => {
+    // const query = '*[_type == "category"]{title, "products": *[_type == "product" && references(^._id)]{name, short_description, "imgUrl":imgUrl.asset->url, slug,}}';
+    // const categories = await client.fetch(query);
     
-  //   return categories;
-  // };
+    // return categories;
+
+
+   const data = await client.fetch(
+      groq `*[_type == "category"]{title, "products": *[_type == "product" && references(^._id)]{name, short_description, "imgUrl":imgUrl.asset->url, slug,}} `, { cachePolicy: 'no-cache' }
+   )
+
+   return data
+  };
 
 
 

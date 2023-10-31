@@ -4,11 +4,14 @@ import { client } from "../../../../env";
 import Link from "next/link";
 import Image from "next/image";
 import BgImage from "../../../../public/Princess.gif"
+import { getAllCategories } from "../../../../sanity/sanity-utils";
 
 const ProductsPage = async () => {
 
-  const query = '*[_type == "category"]{title, "products": *[_type == "product" && references(^._id)]{name, short_description, "imgUrl":imgUrl.asset->url, slug,}}';
-  const categories = await client.fetch(query);
+  // const query = '*[_type == "category"]{title, "products": *[_type == "product" && references(^._id)]{name, short_description, "imgUrl":imgUrl.asset->url, slug,}}';
+  // const categories = await client.fetch(query);
+
+  const categories = await getAllCategories()
 
   return (
     <main className="">
