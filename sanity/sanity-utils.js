@@ -33,11 +33,12 @@ export const getAllProducts = async () => {
     return products;
   };
   
-  export const getAllCategories = async () => {
-    const query = '*[_type == "category"]';
-    const categories = await client.fetch(query);
-    return categories;
-  };
+  // export const getAllCategories = async () => {
+  //   const query = '*[_type == "category"]';
+  //   const categories = await client.fetch(query);
+    
+  //   return categories;
+  // };
 
 
 
@@ -51,6 +52,8 @@ export const getTeamData = async ()=>(
             _createdAt} `
     )
 )
+
+
 export const getComplan = async ()=>(
     await client.fetch(
        groq `*[_type == "complan"] {
@@ -59,6 +62,8 @@ export const getComplan = async ()=>(
     )
 )
 
+
+//  For Aside
 export const getPost = async ()=>(
     await client.fetch(
        groq `*[_type == "post" ] | order(_createdAt desc) {
@@ -75,3 +80,21 @@ export const getPost = async ()=>(
     )
     
 )
+
+
+
+export const getPaginatedPosts = async (page = 0, pageSize = 4) => (
+  await client.fetch(
+    groq `*[_type == "post" ] | order(_createdAt desc) {
+      title,
+      description,
+      body,
+      "imgUrl": imgUrl.asset->url,
+      slug,
+      category,
+      _createdAt
+    }
+    [${(page - 1) * pageSize}...${page * pageSize - 1}]`,
+    { cachePolicy: 'no-cache' }
+  )
+);

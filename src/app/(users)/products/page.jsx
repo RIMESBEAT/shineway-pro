@@ -15,7 +15,7 @@ const ProductsPage = async () => {
       {/* <h1>Products</h1> */}
 <div className="aspect-w-16 aspect-h-9">
 
-  <Image src={BgImage} alt="Background Image" className="w-full h-full object-cover" />
+  <Image src={BgImage} alt="Background Image" priority className="w-full h-full object-cover" />
 </div>
       <section className=" padding__x">
 
