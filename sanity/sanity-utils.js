@@ -41,7 +41,7 @@ export const getAllProducts = async () => {
 
 
    const data = await client.fetch(
-      groq `*[_type == "category"]{title, "products": *[_type == "product" && references(^._id)]{name, short_description, "imgUrl":imgUrl.asset->url, slug,}} `, { cachePolicy: 'no-cache' }
+      groq `*[_type == "category"]{title, "products": *[_type == "product" && references(^._id)]{name, short_description, "imgUrl":imgUrl.asset->url, slug,}} `
    )
 
    return data
