@@ -80,7 +80,8 @@ export const getPost = async ()=>(
           _createdAt,
           _id
       }
-      `,
+      `
+      ,
       { cachePolicy: 'no-cache' }
     )
     
@@ -103,4 +104,7 @@ export const getPaginatedPosts = async (page = 0, pageSize = 4) => (
     [${(page - 1) * pageSize}...${page * pageSize - 1}]`,
     { cachePolicy: 'no-cache' }
   )
+  
 );
+
+console.log(getPaginatedPosts);
