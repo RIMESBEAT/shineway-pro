@@ -11,10 +11,10 @@ const ProductCard = async ({ imgUrl, name, price, description }) => {
         <Image
           src={imgUrl}
           alt={name}
-          width={720}
+          width={500}
           height={350}
           priority
-       quality={60}
+       quality={50}
           className="object-cover  rounded-t-md"
         />
         <div className="flex pt-4 px-2 ">

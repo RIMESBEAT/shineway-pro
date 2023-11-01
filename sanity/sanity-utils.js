@@ -34,18 +34,15 @@ export const getAllProducts = async () => {
   };
   
   export const getAllCategories = async () => {
-    // const query = '*[_type == "category"]{title, "products": *[_type == "product" && references(^._id)]{name, short_description, "imgUrl":imgUrl.asset->url, slug,}}';
-    // const categories = await client.fetch(query);
-    
-    // return categories;
-
+ 
 
    const data = await client.fetch(
-      groq `*[_type == "category"]{title, "products": *[_type == "product" && references(^._id)]{name, short_description, "imgUrl":imgUrl.asset->url, slug,}} `
+      groq `*[_type == "category"]{title, "products": *[_type == "product" && references(^._id)]{name, short_description, "imgUrl":imgUrl, slug,}} `
    )
 
    return data
   };
+
 
 
 
@@ -80,7 +77,8 @@ export const getPost = async ()=>(
           "imgUrl":imgUrl.asset->url,
           slug,
           category,
-          _createdAt
+          _createdAt,
+          _id
       }
       `,
       { cachePolicy: 'no-cache' }
@@ -99,7 +97,8 @@ export const getPaginatedPosts = async (page = 0, pageSize = 4) => (
       "imgUrl": imgUrl.asset->url,
       slug,
       category,
-      _createdAt
+      _createdAt,
+      _id
     }
     [${(page - 1) * pageSize}...${page * pageSize - 1}]`,
     { cachePolicy: 'no-cache' }

@@ -1,6 +1,7 @@
 import { groq } from "next-sanity"
 import { client } from "../../../../../env"
 import Image from "next/image"
+import UseRouter from "@/components/useRouter/useRouter"
 
 
 
@@ -28,6 +29,10 @@ const ProductDetails = async ({params: {slug}}) => {
 
   return (
     <main className="padding__x my-8">
+      <div className="mb-4">
+      <UseRouter/>
+
+      </div>
     <h1 className="text-3xl  uppercase font-bold">{product.name}</h1>
     {
       product.story_title && (

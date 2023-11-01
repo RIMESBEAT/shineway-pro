@@ -4,7 +4,7 @@ import { client } from "../../../../env";
 import Link from "next/link";
 import Image from "next/image";
 import BgImage from "../../../../public/Princess.gif"
-import { getAllCategories } from "../../../../sanity/sanity-utils";
+import { getAllCategories, urlFor } from "../../../../sanity/sanity-utils";
 
 const ProductsPage = async () => {
 
@@ -39,7 +39,7 @@ const ProductsPage = async () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-16">
             {category.products.map((product) => (
               <Link href={`/products/${ product.slug.current}`} key={product._id} >
-                <ProductCard name={product.name} imgUrl={product.imgUrl} description={product.short_description} />
+                <ProductCard name={product.name} imgUrl={urlFor(product.imgUrl).width(500).url()} description={product.short_description} />
               </Link>
             ))}
           </div>

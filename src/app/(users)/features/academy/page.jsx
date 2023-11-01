@@ -1,3 +1,4 @@
+import UseRouter from '@/components/useRouter/useRouter'
 import { aboutAcademy, whyShineway } from '@/global/shinewayAcademy'
 import Image from 'next/image'
 import React from 'react'
@@ -5,6 +6,10 @@ import React from 'react'
 const page = () => {
   return (
     <main className=''>
+      <div className="mb-4 padding__x">
+
+      <UseRouter />
+      </div>
 <section className="flex items-center justify-center relative">
   <div className="absolute z-10 mx-auto padding__x">
   <h1 className='text-white font-extrabold text-3xl md:text-4xl text-center pb-4'>{aboutAcademy.title}</h1>

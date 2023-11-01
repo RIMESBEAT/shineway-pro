@@ -29,7 +29,6 @@ useEffect(()=>{
   const fetchAsideData = async () =>{
     const data = await getPost()
     setPostData(data)
-   
   }
 
   fetchAsideData()
@@ -69,7 +68,7 @@ const handlePrevPage = () => {
     <main className='' >
 <div className="aspect-w-16 aspect-h-9">
 
-<Image src={BlogBg} alt='blog banner'/>
+<Image src={BlogBg} alt='blog banner' priority/>
 </div>
 
 <div className="flex padding__x  items-center">

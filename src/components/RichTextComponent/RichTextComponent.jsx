@@ -3,7 +3,7 @@ import { urlFor } from "../../../sanity/sanity-utils"
 
 const RichTextComponent = {
     types: {
-      image: ({value}) => <Image src={urlFor(value).url()} alt={value.title} width={500} height={300} className='mx-auto my-4 object-cover' />,
+      image: ({value}) => <Image src={urlFor(value).url()} alt={value} width={750} height={300} quality={60} className='mx-auto my-4 object-cover w-auto h-auto' />,
      
     },
 
@@ -41,18 +41,21 @@ const RichTextComponent = {
       },
       list: {
         // Ex. 1: customizing common list types
-        bullet: ({children}) => <ul className="mt-xl">{children}</ul>,
+        bullet: ({children}) => <ul className=" padding__x">{children}</ul>,
         // number: ({children}) => <ol className="mt-lg">{children}</ol>,
-    
+       
         // Ex. 2: rendering custom lists
         checkmarks: ({children}) => <ol className="m-auto text-lg">{children}</ol>,
       },
       listItem: {
         // Ex. 1: customizing common list types
-        bullet: ({children}) => <li style={{listStyleType: 'disclosure-closed'}}>{children}</li>,
-    
-        // Ex. 2: rendering custom list items
-        checkmarks: ({children}) => <li>✅ {children}</li>,
+        bullet: ({children}) => <li style={{ listStyleType: 'disc' }} >{children}</li>,
+
+  // Ex. 2: rendering custom list items
+        checkmarks: ({children}) => <li className="m-auto padding__x">✅ {children}</li>,
+
+  // Ex. 3: custom style for numbered lists
+        number: ({children}) => <li style={{ listStyleType: 'decimal' }} className="mx-auto padding__x">{children}</li>,
       },
     }
     

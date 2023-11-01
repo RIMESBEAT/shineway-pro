@@ -6,6 +6,7 @@ import { getComplan } from '../../../../../sanity/sanity-utils'
 import { client } from '../../../../../env'
 import { groq } from 'next-sanity'
 import { ArrowDownIcon } from '@heroicons/react/24/solid'
+import UseRouter from '@/components/useRouter/useRouter'
 
 
 
@@ -18,8 +19,13 @@ const BusinessPlan =async () => {
 )
 
 
+
   return (
-    <main>
+  <main>
+  <div className="mb-4 padding__x">
+
+  <UseRouter />
+  </div>
       <section className="flex items-center justify-center relative">
   <div className="absolute z-10 mx-auto padding__x">
   <h1 className='text-white font-extrabold text-3xl md:text-4xl text-center pb-4'>{innovativePlanBrief.title}</h1>

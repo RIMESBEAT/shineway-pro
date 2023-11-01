@@ -4,6 +4,8 @@ import React from 'react'
 import { urlFor } from '../../../sanity/sanity-utils'
 
 const Aside = ({category, title, imgUrl, description, createdAt, postData, slug}) => {
+
+ 
   return (
     <main>
 <div className="">
@@ -28,21 +30,7 @@ const Aside = ({category, title, imgUrl, description, createdAt, postData, slug}
     ))
 }
 
-{/* <div className="">
-<h2>Categories</h2>
 
-<div className="flex gap-2">
-
-    {
-    postData?.map((item)=>(
-        <div className="" key={item._id}>
-            <p>{item.category}</p>
-        </div>
-    ))
-}
-</div>
-
-</div> */}
 </div>
     </main>
   )
