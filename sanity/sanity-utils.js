@@ -89,7 +89,7 @@ export const getPost = async ()=>(
 
 
 
-export const getPaginatedPosts = async (page = 0, pageSize = 4) => (
+export const getPaginatedPosts = async (page = 1, pageSize = 10) => (
   await client.fetch(
     groq `*[_type == "post" ] | order(_createdAt desc) {
       title,
@@ -107,4 +107,3 @@ export const getPaginatedPosts = async (page = 0, pageSize = 4) => (
   
 );
 
-console.log(getPaginatedPosts);

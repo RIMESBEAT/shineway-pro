@@ -23,7 +23,7 @@ const [postData, setPostData] = useState([])
 const [totalPages, setTotalPages] = useState(1);
 const [currentPage, setCurrentPage] = useState(1);
 
-const pageSize =4; // Set the desired number of items per page
+const pageSize =5; // Set the desired number of items per page
 
 useEffect(()=>{
   const fetchAsideData = async () =>{
