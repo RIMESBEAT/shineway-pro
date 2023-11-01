@@ -89,20 +89,33 @@ const handlePrevPage = () => {
 
 </div>
 
-<div className='flex justify-between mb-6'>
-<button onClick={handlePrevPage} disabled={currentPage === 1} className='bg-red-500 disabled:bg-gray-500 p-1 rounded-sm'>
+<div className='flex justify-between mb-6 mx-auto'>
+
+  {
+    posts.length <= 0 ? "NO POST YET, CHECK BACK LATER": (
+<div>
+      <button onClick={handlePrevPage} disabled={currentPage === 1} className='bg-red-500 disabled:bg-gray-500 p-1 rounded-sm'>
         Previous Page
       </button>
       <button onClick={handleNextPage} disabled={currentPage === totalPages} className='bg-red-500 disabled:bg-gray-500 p-1 rounded-sm'>
         Next Page
-      </button>
+      </button> 
+</div>
+
+
+    )
+  }
+
     </div>
 </div>
 
     
 
-<div className="flex-[2] hidden lg:flex px-4 my-4">
-<Aside  title={postData.title} postData={postData}/>
+<div className="flex-[2] hidden lg:flex px-4 my-4  ">
+
+{posts.length <= 0 ? "" : <Aside  title={postData.title} postData={postData}/> }
+
+
 </div>
 
     </div>
