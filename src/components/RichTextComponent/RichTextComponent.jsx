@@ -70,7 +70,7 @@ const RichTextComponent = {
       <Image
         src={urlFor(value).url()}
         alt={value}
-        width={750}
+        width={600}
         height={300}
         quality={60}
         className="mx-auto my-4 object-cover w-auto h-auto"
