@@ -11,6 +11,10 @@ import BlogBg from "../../../../public/blogbg.gif"
 import { useEffect } from 'react';
 import { useState } from 'react';
 
+export const metadata = {
+  title:"Blog Page"
+}
+
 
 const BlogPage =  () => {
 
@@ -89,7 +93,7 @@ const handlePrevPage = () => {
 
 </div>
 
-<div className='flex justify-between mb-6 mx-auto'>
+<div className='flex justify-between mb-6'>
 
   {
     posts.length <= 0 ? "NO POST YET, CHECK BACK LATER": (

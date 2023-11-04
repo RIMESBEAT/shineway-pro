@@ -6,6 +6,12 @@ import Image from "next/image";
 import BgImage from "../../../../public/Princess.gif"
 import { getAllCategories, urlFor } from "../../../../sanity/sanity-utils";
 
+
+export const metadata = {
+  title:"Product Page"
+}
+
+
 const ProductsPage = async () => {
 
   // const query = '*[_type == "category"]{title, "products": *[_type == "product" && references(^._id)]{name, short_description, "imgUrl":imgUrl.asset->url, slug,}}';
