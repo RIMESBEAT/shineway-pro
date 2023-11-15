@@ -12,7 +12,7 @@ export const faqsProducts =[
     {
         id: 3,
         question: "How effective are the products?",
-        answer: "Very effect because of its Nano and peptide bond that allows it penetrate fast from the walls of your stomach to our blood stream."
+        answer: "Very effect because, its Nano and peptide bond that allows it penetrate fast from the walls of your stomach to our blood stream."
     },
     {
         id: 4,
@@ -36,7 +36,7 @@ export const faqsCompany =[
     },
     {
         id: 2,
-        question: "After registration is up upgrade allow?",
+        question: "After registration is upgrade allowed?",
         answer: "Yes, you can upgrade to any level within 60 days from the day of your initial registration."
     },
     {
