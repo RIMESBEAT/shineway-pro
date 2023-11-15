@@ -9,9 +9,7 @@ import { ArrowDownIcon } from '@heroicons/react/24/solid'
 import UseRouter from '@/components/useRouter/useRouter'
 
 
-export const metadata = {
-  title:"Shineway Complan"
-}
+
 
 const BusinessPlan =async () => {
 
