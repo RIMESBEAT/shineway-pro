@@ -6,9 +6,6 @@ import Image from 'next/image';
 import React, { useState } from 'react'
 import ContactImg from '../../../../public/contactUs.png'
 
-export const metadata = {
-  title:"Contact Page"
-}
 
 const Contact = () => {
 
