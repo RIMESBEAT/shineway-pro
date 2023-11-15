@@ -11,9 +11,7 @@ import BlogBg from "../../../../public/blogbg.gif"
 import { useEffect } from 'react';
 import { useState } from 'react';
 
-export const metadata = {
-  title:"Blog Page"
-}
+
 
 
 const BlogPage =  () => {
