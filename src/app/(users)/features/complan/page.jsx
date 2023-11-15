@@ -16,7 +16,7 @@ const BusinessPlan =async () => {
  const complanFile = await client.fetch(
   groq `*[_type == "complan"] {
   "pdf_file": pdf_file.asset->url,
-      } `
+      } `, { cachePolicy: 'no-cache' }
 )
 
 
