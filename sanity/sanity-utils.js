@@ -62,7 +62,7 @@ export const getComplan = async ()=>(
     await client.fetch(
        groq `*[_type == "complan"] {
        "pdf_file": pdf_file.asset->url,
-           } `
+           } `, { cachePolicy: 'no-cache' }
     )
 )
 
