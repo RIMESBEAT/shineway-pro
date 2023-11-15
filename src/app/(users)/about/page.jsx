@@ -12,9 +12,6 @@ import Accordion from "@/components/accordion/Accordion";
 import { motion } from "framer-motion";
 
 
-export const metadata = {
-  title:"About Page"
-}
 
 const AboutPage =  () => {
 
