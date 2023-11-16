@@ -135,7 +135,7 @@ const closeModal = () => {
 
         <div className="mb-20">
           <div className=" text-center my-10 text-2xl font-extrabold">
-            <h1 className="text-2xl md:text-4xl font-bold text-[#242f9f] dark:text-white mb-10 ">Our Amazing team</h1>
+            <h1 className="text-2xl md:text-4xl font-bold text-[#242f9f] dark:text-white mb-10 ">Our Amazing Team</h1>
           </div>
           <div className=" grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3 gap-8 justify-center " >
            
